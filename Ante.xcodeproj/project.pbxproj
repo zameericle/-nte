@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5AD8A449ADEC9A160B6C6E34 /* Pods_krypta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD56BE6306D82842872BDDC8 /* Pods_krypta.framework */; };
+		D0096182208404FF00E9E5FC /* AccountsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0096181208404FF00E9E5FC /* AccountsModel.swift */; };
+		D0271C422086B97F000EDECE /* BinanceTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0271C412086B97F000EDECE /* BinanceTicker.swift */; };
+		D041926E2062174D00E827A1 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D041926F2062174D00E827A1 /* CryptoSwift.framework */; };
+		D042B3F520659DFD005CF5B4 /* GDAXRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B3F420659DFD005CF5B4 /* GDAXRepository.swift */; };
+		D042B3F720659F9A005CF5B4 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B3F620659F9A005CF5B4 /* KeyManager.swift */; };
+		D042B3FF2065B5B3005CF5B4 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B3FE2065B5B3005CF5B4 /* Double.swift */; };
+		D042B4022065B8BE005CF5B4 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B4012065B8BE005CF5B4 /* AccountsViewModel.swift */; };
+		D0549F2B2071CBC500F08ACC /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0549F2A2071CBC500F08ACC /* AccountViewModel.swift */; };
+		D0587CF52055CE850040CE16 /* GDAXClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587CF42055CE850040CE16 /* GDAXClient.swift */; };
+		D0587CFA2055EEE80040CE16 /* GDAXTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587CF92055EEE80040CE16 /* GDAXTime.swift */; };
+		D0587CFC20561EA80040CE16 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587CFB20561EA80040CE16 /* DateFormatter.swift */; };
+		D0587CFE205629320040CE16 /* GDAXCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587CFD205629320040CE16 /* GDAXCurrency.swift */; };
+		D0587D0020562AC50040CE16 /* GDAXProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587CFF20562AC50040CE16 /* GDAXProduct.swift */; };
+		D0587D0220562B9F0040CE16 /* GDAXProductOrderBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587D0120562B9F0040CE16 /* GDAXProductOrderBook.swift */; };
+		D0587D0620563FE80040CE16 /* GDAXProductTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587D0520563FE80040CE16 /* GDAXProductTick.swift */; };
+		D0587D08205640B00040CE16 /* GDAXProductTrade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587D07205640B00040CE16 /* GDAXProductTrade.swift */; };
+		D0587D0A205642AB0040CE16 /* GDAXPublicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587D09205642AB0040CE16 /* GDAXPublicAPI.swift */; };
+		D0587D0C205642CD0040CE16 /* AnteHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587D0B205642CD0040CE16 /* AnteHTTPClient.swift */; };
+		D0587D0E205642F00040CE16 /* GDAXPrivateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587D0D205642F00040CE16 /* GDAXPrivateAPI.swift */; };
+		D0587D11205645640040CE16 /* GDAXHistoricRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587D10205645640040CE16 /* GDAXHistoricRate.swift */; };
+		D0587D132056542E0040CE16 /* GDAXProductDailyStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587D122056542E0040CE16 /* GDAXProductDailyStat.swift */; };
+		D05E9BCA206B41D0009BE5AC /* GDAXWebSocketFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E9BC9206B41D0009BE5AC /* GDAXWebSocketFeed.swift */; };
+		D05E9BCB206B41F1009BE5AC /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05E9BCC206B41F1009BE5AC /* Starscream.framework */; };
+		D05E9BD4206B621F009BE5AC /* AnteWebSocketFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E9BD3206B621F009BE5AC /* AnteWebSocketFeed.swift */; };
+		D05E9BD6206B62DE009BE5AC /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E9BD5206B62DE009BE5AC /* AppManager.swift */; };
+		D05E9BD9206B6EC6009BE5AC /* GDAXTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E9BD8206B6EC6009BE5AC /* GDAXTicker.swift */; };
+		D070AF5A205F5AF5001E47FD /* Keys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D070AF5B205F5AF5001E47FD /* Keys.framework */; };
+		D070AF5D205F5E30001E47FD /* GDAXAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070AF5C205F5E30001E47FD /* GDAXAccount.swift */; };
+		D070AF5F205F63D9001E47FD /* GDAXAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070AF5E205F63D9001E47FD /* GDAXAPIError.swift */; };
+		D070AF63205F730A001E47FD /* GDAXAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070AF62205F730A001E47FD /* GDAXAPI.swift */; };
+		D0C4CDB5204B4BE400E41E40 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C4CDB4204B4BE400E41E40 /* HeaderView.swift */; };
+		D0C865C22077FD20005E2DEB /* AnteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C865C12077FD20005E2DEB /* AnteRepository.swift */; };
+		D0CCF671204B160B00085AD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CCF670204B160B00085AD3 /* AppDelegate.swift */; };
+		D0CCF673204B160B00085AD3 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CCF672204B160B00085AD3 /* DashboardViewController.swift */; };
+		D0CCF676204B160B00085AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CCF674204B160B00085AD3 /* Main.storyboard */; };
+		D0CCF678204B160B00085AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0CCF677204B160B00085AD3 /* Assets.xcassets */; };
+		D0CCF67B204B160B00085AD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0CCF679204B160B00085AD3 /* LaunchScreen.storyboard */; };
+		D0CCF684204B16BB00085AD3 /* AppColors+Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CCF683204B16BB00085AD3 /* AppColors+Fonts.swift */; };
+		D0D3CE1D207050CF0082C722 /* BinanceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE1C207050CF0082C722 /* BinanceClient.swift */; };
+		D0D3CE202070529F0082C722 /* BinanceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE1F2070529F0082C722 /* BinanceAPI.swift */; };
+		D0D3CE24207052B70082C722 /* BinancePrivateAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE23207052B70082C722 /* BinancePrivateAPI.swift */; };
+		D0D3CE26207052C80082C722 /* BinanceWebSocketFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE25207052C80082C722 /* BinanceWebSocketFeed.swift */; };
+		D0D3CE29207053B20082C722 /* BinanceAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE28207053B20082C722 /* BinanceAPIError.swift */; };
+		D0D3CE41207057DC0082C722 /* AnteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE3E207057DC0082C722 /* AnteModel.swift */; };
+		D0D3CE42207057DC0082C722 /* AnteTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE3F207057DC0082C722 /* AnteTicker.swift */; };
+		D0D3CE43207057DC0082C722 /* AnteAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE40207057DC0082C722 /* AnteAccount.swift */; };
+		D0D3CE45207058120082C722 /* BinanceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE44207058120082C722 /* BinanceRepository.swift */; };
+		D0D3CE47207066F90082C722 /* AnteAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE46207066F90082C722 /* AnteAPIError.swift */; };
+		D0D3CE49207071C60082C722 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE48207071C60082C722 /* Date.swift */; };
+		D0D3CE4B207075C50082C722 /* BinanceAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE4A207075C50082C722 /* BinanceAccount.swift */; };
+		D0ED2E47204B901D00D5EF40 /* KryptaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED2E46204B901D00D5EF40 /* KryptaCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6F4F2F7925D23FE0E6D5830A /* Pods-krypta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-krypta.release.xcconfig"; path = "Pods/Target Support Files/Pods-krypta/Pods-krypta.release.xcconfig"; sourceTree = "<group>"; };
+		D0096181208404FF00E9E5FC /* AccountsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsModel.swift; sourceTree = "<group>"; };
+		D0271C412086B97F000EDECE /* BinanceTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceTicker.swift; sourceTree = "<group>"; };
+		D041926F2062174D00E827A1 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D042B3F420659DFD005CF5B4 /* GDAXRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXRepository.swift; sourceTree = "<group>"; };
+		D042B3F620659F9A005CF5B4 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
+		D042B3FE2065B5B3005CF5B4 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		D042B4012065B8BE005CF5B4 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		D0549F2A2071CBC500F08ACC /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		D0587CF42055CE850040CE16 /* GDAXClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXClient.swift; sourceTree = "<group>"; };
+		D0587CF92055EEE80040CE16 /* GDAXTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXTime.swift; sourceTree = "<group>"; };
+		D0587CFB20561EA80040CE16 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		D0587CFD205629320040CE16 /* GDAXCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXCurrency.swift; sourceTree = "<group>"; };
+		D0587CFF20562AC50040CE16 /* GDAXProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXProduct.swift; sourceTree = "<group>"; };
+		D0587D0120562B9F0040CE16 /* GDAXProductOrderBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXProductOrderBook.swift; sourceTree = "<group>"; };
+		D0587D0520563FE80040CE16 /* GDAXProductTick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXProductTick.swift; sourceTree = "<group>"; };
+		D0587D07205640B00040CE16 /* GDAXProductTrade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXProductTrade.swift; sourceTree = "<group>"; };
+		D0587D09205642AB0040CE16 /* GDAXPublicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXPublicAPI.swift; sourceTree = "<group>"; };
+		D0587D0B205642CD0040CE16 /* AnteHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnteHTTPClient.swift; sourceTree = "<group>"; };
+		D0587D0D205642F00040CE16 /* GDAXPrivateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXPrivateAPI.swift; sourceTree = "<group>"; };
+		D0587D10205645640040CE16 /* GDAXHistoricRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXHistoricRate.swift; sourceTree = "<group>"; };
+		D0587D122056542E0040CE16 /* GDAXProductDailyStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXProductDailyStat.swift; sourceTree = "<group>"; };
+		D05E9BC9206B41D0009BE5AC /* GDAXWebSocketFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXWebSocketFeed.swift; sourceTree = "<group>"; };
+		D05E9BCC206B41F1009BE5AC /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D05E9BD3206B621F009BE5AC /* AnteWebSocketFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnteWebSocketFeed.swift; sourceTree = "<group>"; };
+		D05E9BD5206B62DE009BE5AC /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		D05E9BD8206B6EC6009BE5AC /* GDAXTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXTicker.swift; sourceTree = "<group>"; };
+		D070AF5B205F5AF5001E47FD /* Keys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D070AF5C205F5E30001E47FD /* GDAXAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXAccount.swift; sourceTree = "<group>"; };
+		D070AF5E205F63D9001E47FD /* GDAXAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXAPIError.swift; sourceTree = "<group>"; };
+		D070AF62205F730A001E47FD /* GDAXAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXAPI.swift; sourceTree = "<group>"; };
+		D0C4CDB4204B4BE400E41E40 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D0C865C12077FD20005E2DEB /* AnteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnteRepository.swift; sourceTree = "<group>"; };
+		D0CCF66D204B160B00085AD3 /* Ante.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ante.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0CCF670204B160B00085AD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0CCF672204B160B00085AD3 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		D0CCF675204B160B00085AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0CCF677204B160B00085AD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0CCF67A204B160B00085AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0CCF67C204B160B00085AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0CCF683204B16BB00085AD3 /* AppColors+Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppColors+Fonts.swift"; sourceTree = "<group>"; };
+		D0D3CE1C207050CF0082C722 /* BinanceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceClient.swift; sourceTree = "<group>"; };
+		D0D3CE1F2070529F0082C722 /* BinanceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceAPI.swift; sourceTree = "<group>"; };
+		D0D3CE23207052B70082C722 /* BinancePrivateAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinancePrivateAPI.swift; sourceTree = "<group>"; };
+		D0D3CE25207052C80082C722 /* BinanceWebSocketFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceWebSocketFeed.swift; sourceTree = "<group>"; };
+		D0D3CE28207053B20082C722 /* BinanceAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceAPIError.swift; sourceTree = "<group>"; };
+		D0D3CE3E207057DC0082C722 /* AnteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnteModel.swift; sourceTree = "<group>"; };
+		D0D3CE3F207057DC0082C722 /* AnteTicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnteTicker.swift; sourceTree = "<group>"; };
+		D0D3CE40207057DC0082C722 /* AnteAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnteAccount.swift; sourceTree = "<group>"; };
+		D0D3CE44207058120082C722 /* BinanceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceRepository.swift; sourceTree = "<group>"; };
+		D0D3CE46207066F90082C722 /* AnteAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnteAPIError.swift; sourceTree = "<group>"; };
+		D0D3CE48207071C60082C722 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		D0D3CE4A207075C50082C722 /* BinanceAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceAccount.swift; sourceTree = "<group>"; };
+		D0D7653BC87FF6B1646B0E00 /* Pods-krypta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-krypta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-krypta/Pods-krypta.debug.xcconfig"; sourceTree = "<group>"; };
+		D0ED2E46204B901D00D5EF40 /* KryptaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KryptaCell.swift; sourceTree = "<group>"; };
+		DD56BE6306D82842872BDDC8 /* Pods_krypta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_krypta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0CCF66A204B160B00085AD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D05E9BCB206B41F1009BE5AC /* Starscream.framework in Frameworks */,
+				D041926E2062174D00E827A1 /* CryptoSwift.framework in Frameworks */,
+				D070AF5A205F5AF5001E47FD /* Keys.framework in Frameworks */,
+				5AD8A449ADEC9A160B6C6E34 /* Pods_krypta.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40708F4CE49F122D55FED88E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D05E9BCC206B41F1009BE5AC /* Starscream.framework */,
+				D041926F2062174D00E827A1 /* CryptoSwift.framework */,
+				D070AF5B205F5AF5001E47FD /* Keys.framework */,
+				DD56BE6306D82842872BDDC8 /* Pods_krypta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7677509AF462E2E25047344F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0D7653BC87FF6B1646B0E00 /* Pods-krypta.debug.xcconfig */,
+				6F4F2F7925D23FE0E6D5830A /* Pods-krypta.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0051B50204B85380035625F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0587CFB20561EA80040CE16 /* DateFormatter.swift */,
+				D042B3FE2065B5B3005CF5B4 /* Double.swift */,
+				D0D3CE48207071C60082C722 /* Date.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D0096180208404D900E9E5FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0096181208404FF00E9E5FC /* AccountsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D042B3F320659D10005CF5B4 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3CE44207058120082C722 /* BinanceRepository.swift */,
+				D042B3F420659DFD005CF5B4 /* GDAXRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D042B4002065B7ED005CF5B4 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0549F2A2071CBC500F08ACC /* AccountViewModel.swift */,
+				D042B4012065B8BE005CF5B4 /* AccountsViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		D0587CF22055CE650040CE16 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				D0587D0B205642CD0040CE16 /* AnteHTTPClient.swift */,
+				D05E9BD3206B621F009BE5AC /* AnteWebSocketFeed.swift */,
+				D0D3CE1B2070509D0082C722 /* Binance */,
+				D0587CF32055CE6E0040CE16 /* GDAX */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		D0587CF32055CE6E0040CE16 /* GDAX */ = {
+			isa = PBXGroup;
+			children = (
+				D0587CF82055EEDD0040CE16 /* Models */,
+				D0587D0F2056430C0040CE16 /* API */,
+				D0587CF42055CE850040CE16 /* GDAXClient.swift */,
+			);
+			path = GDAX;
+			sourceTree = "<group>";
+		};
+		D0587CF82055EEDD0040CE16 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D070AF5C205F5E30001E47FD /* GDAXAccount.swift */,
+				D070AF5E205F63D9001E47FD /* GDAXAPIError.swift */,
+				D0587CFD205629320040CE16 /* GDAXCurrency.swift */,
+				D0587D10205645640040CE16 /* GDAXHistoricRate.swift */,
+				D0587CFF20562AC50040CE16 /* GDAXProduct.swift */,
+				D0587D122056542E0040CE16 /* GDAXProductDailyStat.swift */,
+				D0587D0120562B9F0040CE16 /* GDAXProductOrderBook.swift */,
+				D0587D0520563FE80040CE16 /* GDAXProductTick.swift */,
+				D0587D07205640B00040CE16 /* GDAXProductTrade.swift */,
+				D05E9BD8206B6EC6009BE5AC /* GDAXTicker.swift */,
+				D0587CF92055EEE80040CE16 /* GDAXTime.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D0587D0F2056430C0040CE16 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D070AF62205F730A001E47FD /* GDAXAPI.swift */,
+				D0587D0D205642F00040CE16 /* GDAXPrivateAPI.swift */,
+				D0587D09205642AB0040CE16 /* GDAXPublicAPI.swift */,
+				D05E9BC9206B41D0009BE5AC /* GDAXWebSocketFeed.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D05E9BD7206B663B009BE5AC /* App Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D05E9BD5206B62DE009BE5AC /* AppManager.swift */,
+			);
+			path = "App Manager";
+			sourceTree = "<group>";
+		};
+		D0C4CDB3204B4BC100E41E40 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D0C4CDB4204B4BE400E41E40 /* HeaderView.swift */,
+				D0ED2E46204B901D00D5EF40 /* KryptaCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D0CCF664204B160B00085AD3 = {
+			isa = PBXGroup;
+			children = (
+				D0CCF66F204B160B00085AD3 /* Ante */,
+				D0CCF66E204B160B00085AD3 /* Products */,
+				7677509AF462E2E25047344F /* Pods */,
+				40708F4CE49F122D55FED88E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D0CCF66E204B160B00085AD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0CCF66D204B160B00085AD3 /* Ante.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0CCF66F204B160B00085AD3 /* Ante */ = {
+			isa = PBXGroup;
+			children = (
+				D05E9BD7206B663B009BE5AC /* App Manager */,
+				D0587CF22055CE650040CE16 /* Clients */,
+				D0051B50204B85380035625F /* Extensions */,
+				D0096180208404D900E9E5FC /* Models */,
+				D0D3CE31207057600082C722 /* Protocols */,
+				D042B3F320659D10005CF5B4 /* Repositories */,
+				D0CCF682204B16A400085AD3 /* Utils */,
+				D0CCF685204B1BE800085AD3 /* View Controllers */,
+				D042B4002065B7ED005CF5B4 /* View Models */,
+				D0C4CDB3204B4BC100E41E40 /* Views */,
+				D0CCF670204B160B00085AD3 /* AppDelegate.swift */,
+				D0CCF674204B160B00085AD3 /* Main.storyboard */,
+				D0CCF677204B160B00085AD3 /* Assets.xcassets */,
+				D0CCF686204B2A8A00085AD3 /* Fonts */,
+				D0CCF679204B160B00085AD3 /* LaunchScreen.storyboard */,
+				D0CCF67C204B160B00085AD3 /* Info.plist */,
+			);
+			path = Ante;
+			sourceTree = "<group>";
+		};
+		D0CCF682204B16A400085AD3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D0CCF683204B16BB00085AD3 /* AppColors+Fonts.swift */,
+				D042B3F620659F9A005CF5B4 /* KeyManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D0CCF685204B1BE800085AD3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0CCF672204B160B00085AD3 /* DashboardViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D0CCF686204B2A8A00085AD3 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D0D3CE1B2070509D0082C722 /* Binance */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3CE27207053A20082C722 /* Models */,
+				D0D3CE1E207052540082C722 /* API */,
+				D0D3CE1C207050CF0082C722 /* BinanceClient.swift */,
+			);
+			path = Binance;
+			sourceTree = "<group>";
+		};
+		D0D3CE1E207052540082C722 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3CE1F2070529F0082C722 /* BinanceAPI.swift */,
+				D0D3CE23207052B70082C722 /* BinancePrivateAPI.swift */,
+				D0D3CE25207052C80082C722 /* BinanceWebSocketFeed.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		D0D3CE27207053A20082C722 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3CE4A207075C50082C722 /* BinanceAccount.swift */,
+				D0D3CE28207053B20082C722 /* BinanceAPIError.swift */,
+				D0271C412086B97F000EDECE /* BinanceTicker.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D0D3CE31207057600082C722 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3CE40207057DC0082C722 /* AnteAccount.swift */,
+				D0D3CE46207066F90082C722 /* AnteAPIError.swift */,
+				D0D3CE3E207057DC0082C722 /* AnteModel.swift */,
+				D0C865C12077FD20005E2DEB /* AnteRepository.swift */,
+				D0D3CE3F207057DC0082C722 /* AnteTicker.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0CCF66C204B160B00085AD3 /* Ante */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0CCF67F204B160B00085AD3 /* Build configuration list for PBXNativeTarget "Ante" */;
+			buildPhases = (
+				C8FBD35B22E42AD1182DFA0F /* [CP] Check Pods Manifest.lock */,
+				D0CCF669204B160B00085AD3 /* Sources */,
+				D0CCF66A204B160B00085AD3 /* Frameworks */,
+				D0CCF66B204B160B00085AD3 /* Resources */,
+				98F435A585E30F3D7BA81085 /* [CP] Embed Pods Frameworks */,
+				0932B892B92D84E2D112FF7C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ante;
+			productName = krypta;
+			productReference = D0CCF66D204B160B00085AD3 /* Ante.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0CCF665204B160B00085AD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = shabash;
+				TargetAttributes = {
+					D0CCF66C204B160B00085AD3 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D0CCF668204B160B00085AD3 /* Build configuration list for PBXProject "Ante" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0CCF664204B160B00085AD3;
+			productRefGroup = D0CCF66E204B160B00085AD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0CCF66C204B160B00085AD3 /* Ante */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0CCF66B204B160B00085AD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0CCF67B204B160B00085AD3 /* LaunchScreen.storyboard in Resources */,
+				D0CCF678204B160B00085AD3 /* Assets.xcassets in Resources */,
+				D0CCF676204B160B00085AD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0932B892B92D84E2D112FF7C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-krypta/Pods-krypta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98F435A585E30F3D7BA81085 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-krypta/Pods-krypta-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-krypta/Pods-krypta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8FBD35B22E42AD1182DFA0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-krypta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0CCF669204B160B00085AD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0587D0220562B9F0040CE16 /* GDAXProductOrderBook.swift in Sources */,
+				D0587D0E205642F00040CE16 /* GDAXPrivateAPI.swift in Sources */,
+				D0587D132056542E0040CE16 /* GDAXProductDailyStat.swift in Sources */,
+				D0587CFC20561EA80040CE16 /* DateFormatter.swift in Sources */,
+				D042B3FF2065B5B3005CF5B4 /* Double.swift in Sources */,
+				D0D3CE43207057DC0082C722 /* AnteAccount.swift in Sources */,
+				D0D3CE26207052C80082C722 /* BinanceWebSocketFeed.swift in Sources */,
+				D0D3CE42207057DC0082C722 /* AnteTicker.swift in Sources */,
+				D0CCF673204B160B00085AD3 /* DashboardViewController.swift in Sources */,
+				D0CCF671204B160B00085AD3 /* AppDelegate.swift in Sources */,
+				D0D3CE202070529F0082C722 /* BinanceAPI.swift in Sources */,
+				D0D3CE49207071C60082C722 /* Date.swift in Sources */,
+				D0587D0020562AC50040CE16 /* GDAXProduct.swift in Sources */,
+				D042B3F720659F9A005CF5B4 /* KeyManager.swift in Sources */,
+				D0587CFE205629320040CE16 /* GDAXCurrency.swift in Sources */,
+				D070AF5D205F5E30001E47FD /* GDAXAccount.swift in Sources */,
+				D0D3CE47207066F90082C722 /* AnteAPIError.swift in Sources */,
+				D05E9BCA206B41D0009BE5AC /* GDAXWebSocketFeed.swift in Sources */,
+				D070AF5F205F63D9001E47FD /* GDAXAPIError.swift in Sources */,
+				D0D3CE1D207050CF0082C722 /* BinanceClient.swift in Sources */,
+				D0587D0A205642AB0040CE16 /* GDAXPublicAPI.swift in Sources */,
+				D0587CFA2055EEE80040CE16 /* GDAXTime.swift in Sources */,
+				D0549F2B2071CBC500F08ACC /* AccountViewModel.swift in Sources */,
+				D0D3CE45207058120082C722 /* BinanceRepository.swift in Sources */,
+				D05E9BD4206B621F009BE5AC /* AnteWebSocketFeed.swift in Sources */,
+				D0D3CE4B207075C50082C722 /* BinanceAccount.swift in Sources */,
+				D0ED2E47204B901D00D5EF40 /* KryptaCell.swift in Sources */,
+				D0CCF684204B16BB00085AD3 /* AppColors+Fonts.swift in Sources */,
+				D05E9BD6206B62DE009BE5AC /* AppManager.swift in Sources */,
+				D0D3CE41207057DC0082C722 /* AnteModel.swift in Sources */,
+				D042B3F520659DFD005CF5B4 /* GDAXRepository.swift in Sources */,
+				D0271C422086B97F000EDECE /* BinanceTicker.swift in Sources */,
+				D0096182208404FF00E9E5FC /* AccountsModel.swift in Sources */,
+				D042B4022065B8BE005CF5B4 /* AccountsViewModel.swift in Sources */,
+				D0587D0C205642CD0040CE16 /* AnteHTTPClient.swift in Sources */,
+				D0C4CDB5204B4BE400E41E40 /* HeaderView.swift in Sources */,
+				D0587D0620563FE80040CE16 /* GDAXProductTick.swift in Sources */,
+				D0C865C22077FD20005E2DEB /* AnteRepository.swift in Sources */,
+				D0587D08205640B00040CE16 /* GDAXProductTrade.swift in Sources */,
+				D0D3CE24207052B70082C722 /* BinancePrivateAPI.swift in Sources */,
+				D0587D11205645640040CE16 /* GDAXHistoricRate.swift in Sources */,
+				D070AF63205F730A001E47FD /* GDAXAPI.swift in Sources */,
+				D0587CF52055CE850040CE16 /* GDAXClient.swift in Sources */,
+				D0D3CE29207053B20082C722 /* BinanceAPIError.swift in Sources */,
+				D05E9BD9206B6EC6009BE5AC /* GDAXTicker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0CCF674204B160B00085AD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0CCF675204B160B00085AD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0CCF679204B160B00085AD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0CCF67A204B160B00085AD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0CCF67D204B160B00085AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0CCF67E204B160B00085AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0CCF680204B160B00085AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0D7653BC87FF6B1646B0E00 /* Pods-krypta.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79W8G7BG9V;
+				INFOPLIST_FILE = Ante/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shabash.Ante;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D0CCF681204B160B00085AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F4F2F7925D23FE0E6D5830A /* Pods-krypta.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 79W8G7BG9V;
+				INFOPLIST_FILE = Ante/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shabash.Ante;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0CCF668204B160B00085AD3 /* Build configuration list for PBXProject "Ante" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0CCF67D204B160B00085AD3 /* Debug */,
+				D0CCF67E204B160B00085AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0CCF67F204B160B00085AD3 /* Build configuration list for PBXNativeTarget "Ante" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0CCF680204B160B00085AD3 /* Debug */,
+				D0CCF681204B160B00085AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0CCF665204B160B00085AD3 /* Project object */;
+}

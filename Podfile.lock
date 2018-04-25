@@ -1,0 +1,22 @@
+PODS:
+  - CryptoSwift (0.9.0)
+  - Keys (1.0.0)
+  - Starscream (3.0.4)
+
+DEPENDENCIES:
+  - CryptoSwift
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - Starscream (~> 3.0.2)
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+SPEC CHECKSUMS:
+  CryptoSwift: bca8c5b653dcc2d9734409242a070ff53bafac86
+  Keys: af65e23feef2a047b3277b1ef0399f1209ef9d46
+  Starscream: f5da93fe6984c77b694366bf7299b7dc63a76f26
+
+PODFILE CHECKSUM: 6f01e07b64ea37644c96853a8c89e2b3a7bc971e
+
+COCOAPODS: 1.4.0
