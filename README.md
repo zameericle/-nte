@@ -9,4 +9,4 @@ Instructions:
   * Open the .xcworkspace
   
 
-![Dashboard](Dashboard.png?raw=true "Title")
+![Ante](Ante.png?raw=true "Title")
