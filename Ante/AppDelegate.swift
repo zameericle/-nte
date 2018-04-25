@@ -16,51 +16,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    var settingsVC: UIViewController?
 
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-      
+
       // Override point for customization after application launch.
-      let mainController = window?.rootViewController as! UITabBarController
+      let mainController = self.window?.rootViewController as! UITabBarController
       self.dashboardVC = (mainController.viewControllers![0] as! DashboardViewController)
       
       // inject the model
       self.dashboardVC?.accountsVM = AccountsViewModel(AppManager.sharedInstance.accountsModel)
-      
-      AppManager.sharedInstance.refresh { source, accounts, err in
-         print("\(source) loading completed")
-         if let err = err {
-            //TODO: handle error
-            print(err)
-         }
-         
-         do {
-          try AppManager.sharedInstance.startTickerUpdates(accounts!)
-         } catch (let err) {
-            print(err)
-         }
 
-//         do {
-//            try self.accountsVM?.observeTickerUpdates(source: .gdax) { tickerUpdate in
-//               self.updateUI {
-//                  self.updateHeader(tickerUpdate)
-//
-//                  guard let cell = (self.tableView.visibleCells.first { cell in
-//                     let cell = cell as! AnteCell
-//                     return cell.model.id == tickerUpdate.model.id
-//                  }) else {
-//                     return
-//                  }
-//
-//                  if let indexPath = self.tableView.indexPath(for: cell) {
-//                     self.tableView.reloadRows(at: [indexPath], with: .none)
-//                  }
-//
-//                  if (self.view.isHidden == true) {
-//                     self.showUI()
-//                  }
-//               }
-//            }
-//         } catch (let err) {
-//            print(err)
-//         }
+      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+         
+         AppManager.sharedInstance.refresh { source, accounts, err in
+            print("\(source) loading completed")
+            if let err = err {
+               //TODO: handle error
+               print(err)
+            }
+            
+            do {
+             try AppManager.sharedInstance.startTickerUpdates(accounts!)
+            } catch (let err) {
+               print(err)
+            }
+         }
       }
       
       return true

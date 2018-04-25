@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +17,47 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXb-lJ-S8t">
+                                <rect key="frame" x="0.0" y="280" width="375" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nte" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-kV-WyR" userLabel="nte">
+                                        <rect key="frame" x="88" y="7" width="200" height="115"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="96"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ION-i1-JbR" userLabel="&lt;|">
+                                        <rect key="frame" x="88" y="7" width="86.5" height="115"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="96"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="vBh-kV-WyR" firstAttribute="leading" secondItem="ION-i1-JbR" secondAttribute="leading" id="0Hk-RV-q64"/>
+                                    <constraint firstAttribute="trailing" secondItem="vBh-kV-WyR" secondAttribute="trailing" constant="87" id="37r-dV-bCR"/>
+                                    <constraint firstItem="ION-i1-JbR" firstAttribute="centerY" secondItem="UXb-lJ-S8t" secondAttribute="centerY" id="McS-b3-jCH"/>
+                                    <constraint firstItem="ION-i1-JbR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="UXb-lJ-S8t" secondAttribute="leading" constant="88" id="MwT-Ph-oAu"/>
+                                    <constraint firstItem="ION-i1-JbR" firstAttribute="baseline" secondItem="vBh-kV-WyR" secondAttribute="baseline" id="NRI-6g-q5i"/>
+                                    <constraint firstItem="ION-i1-JbR" firstAttribute="trailing" secondItem="vBh-kV-WyR" secondAttribute="trailing" constant="-113.5" id="j1e-oF-Pf7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UXb-lJ-S8t" secondAttribute="bottom" constant="259" id="4QR-PJ-fVD"/>
+                            <constraint firstItem="UXb-lJ-S8t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="260" id="MKz-Jx-4Fy"/>
+                            <constraint firstItem="UXb-lJ-S8t" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="R45-BG-wco"/>
+                            <constraint firstAttribute="trailing" secondItem="UXb-lJ-S8t" secondAttribute="trailing" id="tRb-mD-FC2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
 </document>
