@@ -23,21 +23,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       
       // inject the model
       self.dashboardVC?.accountsVM = AccountsViewModel(AppManager.sharedInstance.accountsModel)
-
-      DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
          
-         AppManager.sharedInstance.refresh { source, accounts, err in
-            print("\(source) loading completed")
-            if let err = err {
-               //TODO: handle error
-               print(err)
-            }
-            
-            do {
-             try AppManager.sharedInstance.startTickerUpdates(accounts!)
-            } catch (let err) {
-               print(err)
-            }
+      AppManager.sharedInstance.refresh { source, accounts, err in
+         print("\(source) loading completed")
+         if let err = err {
+            //TODO: handle error
+            print(err)
+         }
+         
+         do {
+          try AppManager.sharedInstance.startTickerUpdates(accounts!)
+         } catch (let err) {
+            print(err)
          }
       }
       
