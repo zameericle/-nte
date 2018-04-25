@@ -14,14 +14,22 @@ extension Double {
       return (self * divisor).rounded() / divisor
    }
    
-   func withCommas(_ fractionDigits: Int) -> String {
+   public func withCommasAsCurrency(_ fractionDigits: Int) -> String {
+      return self.withCommas(fractionDigits, NumberFormatter.Style.currency)
+   }
+
+   public func withCommasAsPercent(_ fractionDigits: Int) -> String {
+      return self.withCommas(fractionDigits, NumberFormatter.Style.percent)
+   }
+
+   public func withCommas(_ fractionDigits: Int, _ style: NumberFormatter.Style) -> String {
       let numberFormatter = NumberFormatter()
-      numberFormatter.numberStyle = NumberFormatter.Style.decimal
+      numberFormatter.numberStyle = style
       numberFormatter.generatesDecimalNumbers = true
       numberFormatter.maximumFractionDigits = fractionDigits
       numberFormatter.minimumFractionDigits = fractionDigits
+      numberFormatter.locale = Locale(identifier: "en_US")
       numberFormatter.roundingMode = .up
-      
       return numberFormatter.string(from: NSNumber(value: self))!
    }
 }

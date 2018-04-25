@@ -41,7 +41,7 @@ struct AccountViewModel {
    
    var value: String {
       if let value = self._value {
-         return "$\(value.withCommas(2))"
+         return "\(value.withCommasAsCurrency(2))"
       } else {
          return "$--.--"
       }
@@ -65,7 +65,7 @@ struct AccountViewModel {
    var price: String {
       if let price = self.model.lastTick?.price {
          let convertedPrice = AppManager.sharedInstance.priceConvertor(source: self.source, fromCurrency: self.currency)(price)
-         return "\(convertedPrice.withCommas(2))"
+         return "\(convertedPrice.withCommasAsCurrency(2))"
       } else {
          return "$--.--"
       }
@@ -73,7 +73,7 @@ struct AccountViewModel {
    
    var _gainLoss: (Double, Double)? {
       if let price = self.model.lastTick?.price, let open24 = self.model.lastTick?.open24h {
-         return ((price - open24), ((price - open24)/open24) * 100.00)
+         return ((price - open24), (price - open24)/open24)
       } else {
          return nil
       }
@@ -81,7 +81,7 @@ struct AccountViewModel {
 
    var gainLoss: String {
       if let gainLoss = self._gainLoss {
-         return "\(gainLoss.0.withCommas(2)) \(self.glyph) \(gainLoss.1.withCommas(2))%"
+         return "\(gainLoss.0.withCommasAsCurrency(2)) \(self.glyph) \(gainLoss.1.withCommasAsPercent(2))"
       } else {
          return "--.-- - --.--"
       }

@@ -18,15 +18,15 @@ class AccountsSummaryVM {
    private var _gainLoss: Double
    
    var portfolioTotal: String {
-      return "\(self._portfolioTotal.withCommas(2))"
+      return "\(self._portfolioTotal.withCommasAsCurrency(2))"
    }
    
    var gainLoss: String {
-      return "\(self._gainLoss.withCommas(2))"
+      return "\(self._gainLoss.withCommasAsCurrency(2))"
    }
    
    var _gainLossPct: Double {
-      return ((self._portfolioTotal - 57581.16)/57581.16) * 100
+      return ((self._portfolioTotal - 57581.16)/57581.16)
    }
    
    var gainLossPct: String {
@@ -39,7 +39,7 @@ class AccountsSummaryVM {
          suffix = "▼"
       }
       
-      return "\(value)% \(suffix)"
+      return "\(value.withCommasAsPercent(2)) \(suffix)"
    }
    
    init(_ portfolioTotal: Double) {

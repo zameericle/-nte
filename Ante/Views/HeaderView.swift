@@ -22,9 +22,9 @@ class HeaderView: UIView {
 
    var accountSummary: AccountsSummaryVM? {
       didSet {
-         self.portfolioView.portfolioValueLabel.text = "$\(self.accountSummary!.portfolioTotal)"
-         self.gainLossView.gainLossValueLabel.text = "$\(self.accountSummary!.gainLoss)"
-         self.gainLossView.gainLossPctLabel.text = "$\(self.accountSummary!.gainLossPct)"
+         self.portfolioView.portfolioValueLabel.text = "\(self.accountSummary!.portfolioTotal)"
+         self.gainLossView.gainLossValueLabel.text = "\(self.accountSummary!.gainLoss)"
+         self.gainLossView.gainLossPctLabel.text = "\(self.accountSummary!.gainLossPct)"
       }
    }
    @IBOutlet weak var portfolioView: PortfolioView!
