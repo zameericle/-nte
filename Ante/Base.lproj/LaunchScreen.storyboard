@@ -18,39 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXb-lJ-S8t">
-                                <rect key="frame" x="0.0" y="286.5" width="375" height="115"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nte" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBh-kV-WyR" userLabel="nte">
-                                        <rect key="frame" x="85" y="0.0" width="205" height="115"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="96"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ION-i1-JbR" userLabel="&lt;|">
-                                        <rect key="frame" x="85" y="0.0" width="91.5" height="115"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="96"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="vBh-kV-WyR" firstAttribute="leading" secondItem="ION-i1-JbR" secondAttribute="leading" id="0Hk-RV-q64"/>
-                                    <constraint firstAttribute="trailing" secondItem="vBh-kV-WyR" secondAttribute="trailing" constant="85" id="37r-dV-bCR"/>
-                                    <constraint firstItem="vBh-kV-WyR" firstAttribute="height" secondItem="UXb-lJ-S8t" secondAttribute="height" id="KXU-vV-tMv"/>
-                                    <constraint firstItem="ION-i1-JbR" firstAttribute="centerY" secondItem="UXb-lJ-S8t" secondAttribute="centerY" id="McS-b3-jCH"/>
-                                    <constraint firstItem="ION-i1-JbR" firstAttribute="leading" relation="lessThanOrEqual" secondItem="UXb-lJ-S8t" secondAttribute="leading" constant="85" id="MwT-Ph-oAu"/>
-                                    <constraint firstItem="ION-i1-JbR" firstAttribute="baseline" secondItem="vBh-kV-WyR" secondAttribute="baseline" id="NRI-6g-q5i"/>
-                                    <constraint firstItem="ION-i1-JbR" firstAttribute="trailing" secondItem="vBh-kV-WyR" secondAttribute="trailing" constant="-113.5" id="j1e-oF-Pf7"/>
-                                </constraints>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="Deo-pi-13K">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="UXb-lJ-S8t" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="R45-BG-wco"/>
-                            <constraint firstItem="UXb-lJ-S8t" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="UJ0-3g-uJq"/>
-                            <constraint firstAttribute="trailing" secondItem="UXb-lJ-S8t" secondAttribute="trailing" id="tRb-mD-FC2"/>
+                            <constraint firstItem="Deo-pi-13K" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="AR4-A8-rKP"/>
+                            <constraint firstItem="Deo-pi-13K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="249" id="CdR-kR-MJy"/>
+                            <constraint firstItem="Deo-pi-13K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="J8w-CO-Y5H"/>
+                            <constraint firstItem="Deo-pi-13K" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="hdT-Z2-ahN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -60,4 +37,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Launchscreen" width="1024" height="1024"/>
+    </resources>
 </document>
