@@ -74,8 +74,8 @@ extension AppManagerDataAccess {
 
 typealias AppManagerTickerUpdates = AppManager
 extension AppManagerTickerUpdates {
-   func startTickerUpdates(_ accounts: [AnteAccount]) throws {
-      let sources = accounts.map { account in
+   func startTickerUpdates() throws {
+      let sources = self.accountsModel.map { account in
          return account.source
       }
       
@@ -83,10 +83,24 @@ extension AppManagerTickerUpdates {
          return sources.contains(api.source)
       }
       
-      print(feedApis)
       try feedApis.forEach { api in
          api.delegate = self
          try api.connect()
+      }
+   }
+   
+   func stopTickerUpdates() throws {
+      let sources = self.accountsModel.map { account in
+         return account.source
+      }
+      
+      let feedApis = self.feedAPIs.filter { api in
+         return sources.contains(api.source)
+      }
+      
+      try feedApis.forEach { api in
+         api.delegate = self
+         try api.disconnect()
       }
    }
 }
@@ -121,6 +135,7 @@ extension AppManagerWebSocketFeedDelegate: AnteWebSocketFeedDelegate {
    }
    
    func onConnect(ws: AnteWebSocketFeed) {
+      print("connected")
       do {
          let productIds = generateProductIds(source: ws.source)
          try ws.subscribeTo(productIds: productIds, channels: ["ticker"])

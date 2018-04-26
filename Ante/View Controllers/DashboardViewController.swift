@@ -21,7 +21,7 @@ class DashboardViewController: UIViewController {
             return account._balance > 1.00 ? true : false
          }
          
-         return filteredData!
+         return filteredData!.sorted { $0.currency < $1.currency }
       }
    }
    
