@@ -135,7 +135,7 @@ extension AppManagerWebSocketFeedDelegate: AnteWebSocketFeedDelegate {
    }
    
    func onConnect(ws: AnteWebSocketFeed) {
-      print("connected")
+      print("Connected")
       do {
          let productIds = generateProductIds(source: ws.source)
          try ws.subscribeTo(productIds: productIds, channels: ["ticker"])
@@ -145,7 +145,7 @@ extension AppManagerWebSocketFeedDelegate: AnteWebSocketFeedDelegate {
    }
    
    func onDisconnect(ws: AnteWebSocketFeed, error: Error?) {
-      print("disconnected")
+      print("Disconnected")
    }
    
    func onTickerUpdate(_ ws: AnteWebSocketFeed, _ tick: AnteTicker) {

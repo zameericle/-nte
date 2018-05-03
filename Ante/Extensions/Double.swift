@@ -28,8 +28,7 @@ extension Double {
       numberFormatter.generatesDecimalNumbers = true
       numberFormatter.maximumFractionDigits = fractionDigits
       numberFormatter.minimumFractionDigits = fractionDigits
-      numberFormatter.locale = Locale(identifier: "en_US")
-      numberFormatter.roundingMode = .up
+      numberFormatter.locale = Locale(identifier: "en_US")      
       return numberFormatter.string(from: NSNumber(value: self))!
    }
 }

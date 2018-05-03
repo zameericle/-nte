@@ -9,7 +9,7 @@
 import UIKit
 
 class AnteCell: UITableViewCell {
-   var model: AccountViewModel!
+   var model: AccountViewModel?
    
    @IBOutlet weak var currencyLabel: UILabel!   
    @IBOutlet weak var coinValueLabel: UILabel!
@@ -29,12 +29,14 @@ class AnteCell: UITableViewCell {
    override func layoutSubviews() {
       super.layoutSubviews()
       self.backgroundColor = AppColors.KryptoCellBackgroundColor
-      self.currencyLabel.text = self.model.currency
-      self.coinValueLabel.text = self.model.value
-      self.accountBalanceLabel.text = self.model.balance
-      self.priceLabel.text = self.model.price
-      self.gainLossLabel.text = self.model.gainLoss
-      self.sourceLabel.text = "\(self.model.source)".uppercased()
+      if let model = self.model {
+         self.currencyLabel.text = model.currency
+         self.coinValueLabel.text = model.value
+         self.accountBalanceLabel.text = model.balance
+         self.priceLabel.text = model.price
+         self.gainLossLabel.text = model.gainLoss
+         self.sourceLabel.text = "\(model.source)".uppercased()
+      }
    }
 }
 

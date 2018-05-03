@@ -15,7 +15,7 @@ class DashboardViewController: UIViewController {
    
    var accountsVM: AccountsViewModel?
    
-   private var tableData: [AccountViewModel] {
+   internal var tableData: [AccountViewModel] {
       get {
          let filteredData = self.accountsVM?.filter { account in
             return account._balance > 1.00 ? true : false
@@ -32,6 +32,8 @@ class DashboardViewController: UIViewController {
       self.view.backgroundColor = AppColors.AppBackgroundColor
       self.tableView.backgroundColor = AppColors.TableViewBackgroundColor
       self.tableView.contentInset.bottom = self.tabBarController?.tabBar.frame.height ?? 0
+      self.tableView.rowHeight = 100.0
+      self.tableView.estimatedRowHeight = 100.0
       self.tableView.delegate = self
       self.tableView.dataSource = self
       self.accountsVM?.delegate = self
@@ -83,16 +85,18 @@ extension DashboardViewControllerAccountsViewModelDelegate: AccountsViewModelDel
    
    func onUpdate(models: [AccountViewModel]) {
       self.updateUI {
-         self.updateHeader()
-         
          let indexPaths = self.tableView.visibleCells.filter { cell in
             let cell = cell as! AnteCell
-            return cell.model.id == models[0].id
-         }.map { cell in
-            return self.tableView.indexPath(for: cell)!
+            return cell.model?.id == models[0].id
+            }.map { cell in
+               return self.tableView.indexPath(for: cell)!
+         }         
+
+         if (indexPaths.count > 0) {
+            self.tableView.reloadData()
          }
          
-         self.tableView.reloadRows(at: indexPaths, with: .none)
+         self.updateHeader()
       }
    }
 }
