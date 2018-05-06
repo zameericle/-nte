@@ -24,8 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // inject the model
       self.dashboardVC?.accountsVM = AccountsViewModel(AppManager.sharedInstance.accountsModel)
          
-      AppManager.sharedInstance.refresh { source, accounts, err in
-         print("\(source) loading completed")
+      AppManager.sharedInstance.refresh { accounts, err in
          if let err = err {
             //TODO: handle error
             print(err)

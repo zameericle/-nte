@@ -43,8 +43,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
       // If an error is encountered, use NCUpdateResult.Failed
       // If there's no update required, use NCUpdateResult.NoData
       // If there's an update, use NCUpdateResult.NewData
-      AppManager.sharedInstance.refresh { source, accounts, err in
-         NSLog("\(source) loading completed")
+      AppManager.sharedInstance.refresh { accounts, err in
          completionHandler(NCUpdateResult.newData)
          if let err = err {
             //TODO: handle error

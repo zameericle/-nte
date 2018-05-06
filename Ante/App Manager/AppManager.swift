@@ -59,14 +59,21 @@ class AppManager {
 typealias AppManagerDataAccess = AppManager
 extension AppManagerDataAccess {
    
-   func refresh(completion: @escaping (AnteDataSource, [AnteAccount]?, Error?) -> Void) {
+   func refresh(completion: @escaping ([AnteAccount]?, Error?) -> Void) {
+      let count = repositories.count
+      var idx = 0
+      
       repositories.forEach { repository in
          repository.fetchAllAccounts { accounts, err in
+            print("\(repository.source) loading completed")
+            idx = idx + 1
             if let accounts = accounts {
                self.accountsModel.append(contentsOf: accounts)
             }
             
-            completion(repository.source, accounts, err)
+            if (idx == count) {
+               completion(accounts, err)
+            }
          }
       }
    }
