@@ -84,7 +84,7 @@ struct AccountViewModel {
    var gainLoss: String {
       if let gainLoss = self._gainLoss {
          let convertedPrice = AppManager.sharedInstance.priceConvertor(source: self.source, fromCurrency: self.currency)(gainLoss.0)
-         let precision = convertedPrice < 1 ? 6 : 2
+         let precision = abs(convertedPrice) < 1 ? 6 : 2
          
          return "\(convertedPrice.withCommasAsCurrency(precision)) \(self.glyph) \(gainLoss.1.withCommasAsPercent(2))"
       } else {
