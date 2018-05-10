@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    var window: UIWindow?
    var dashboardVC: DashboardViewController?
    var settingsVC: UIViewController?
+   var model: AccountsModel?
 
    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
@@ -24,12 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // inject the model
       self.dashboardVC?.accountsVM = AccountsViewModel(AppManager.sharedInstance.accountsModel)
          
-      AppManager.sharedInstance.refresh { accounts, err in
+      AppManager.sharedInstance.refresh { model, err in
          if let err = err {
             //TODO: handle error
             print(err)
          }
+      
+         print("Fetched Results: \(model.count)")
          
+         self.model = model
+
          self.startTickers()
       }
       
@@ -68,7 +73,7 @@ typealias AppDelegateTickers = AppDelegate
 extension AppDelegateTickers {
    private func startTickers() {
       do {
-         try AppManager.sharedInstance.startTickerUpdates()
+         try self.model?.startTickerUpdates()
       } catch (let err) {
          print(err)
       }
@@ -76,7 +81,7 @@ extension AppDelegateTickers {
    
    private func stopTickers() {
       do {
-         try AppManager.sharedInstance.stopTickerUpdates()
+         try self.model?.stopTickerUpdates()
       } catch (let err) {
          print(err)
       }

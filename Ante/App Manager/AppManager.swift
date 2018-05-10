@@ -9,8 +9,10 @@
 import Foundation
 
 typealias PriceConversionFunc = (Double) -> (Double)
+
 class AppManager {
    static let sharedInstance = AppManager()
+   let queue = DispatchQueue(label: "com.shabash.Ante.AppManagerQueue")
    
    let accountsModel: AccountsModel = AccountsModel("USD")
    
@@ -18,18 +20,12 @@ class AppManager {
    private let binanceClient: BinanceClient
    private let gdaxClient: GDAXClient
    
-   
-   var feedAPIs: [AnteWebSocketFeed] {
-      get {
-         return [self.gdaxClient.ws!, self.binanceClient.ws!]
-      }
-   }
-   
    private init() {
       self.binanceClient = BinanceClientBuilder.build(config: KeyManager.binanceInfo(), isSandbox: false)
       self.repositories.append(BinanceRepository(client: self.binanceClient))
       self.gdaxClient = GDAXClientBuilder.build(config: KeyManager.gdaxInfo(), isSandbox: false)
       self.repositories.append(GDAXRepository(client: self.gdaxClient))
+      self.accountsModel.delegate = self
    }
    
    public func priceConvertor(source: AnteDataSource, fromCurrency: String) -> PriceConversionFunc {
@@ -58,104 +54,47 @@ class AppManager {
 
 typealias AppManagerDataAccess = AppManager
 extension AppManagerDataAccess {
-   
-   func refresh(completion: @escaping ([AnteAccount]?, Error?) -> Void) {
+   func refresh(completion: @escaping (AccountsModel, [Error]?) -> Void) {
       let count = repositories.count
       var idx = 0
+      var errors = [Error]()
       
       repositories.forEach { repository in
          repository.fetchAllAccounts { accounts, err in
             print("\(repository.source) loading completed")
-            idx = idx + 1
-            if let accounts = accounts {
-               self.accountsModel.append(contentsOf: accounts)
-            }
+            self.queue.sync {
+               idx = idx + 1
+               if let err = err {
+                  errors.append(err)
+               }
+               
+               if let accounts = accounts {
+                  self.accountsModel.append(contentsOf: accounts)
+               }
             
-            if (idx == count) {
-               completion(accounts, err)
+               if (idx == count) {
+                  completion(self.accountsModel, errors.count > 0 ? errors : nil)
+               }
             }
          }
       }
    }
 }
 
-typealias AppManagerTickerUpdates = AppManager
-extension AppManagerTickerUpdates {
-   func startTickerUpdates() throws {
-      let sources = self.accountsModel.map { account in
-         return account.source
+typealias AppManagerAccountsModelDelegate = AppManager
+extension AppManagerAccountsModelDelegate: AccountsModelDelegate {
+   func connectionURLStringForSource(_ source: AnteDataSource) -> String {
+      var urlString = ""
+      switch(source) {
+         case .gdax: urlString = self.gdaxClient.wsURLString
+         case .binance: urlString = self.binanceClient.wsURLString
+         default: urlString = ""
       }
       
-      let feedApis = self.feedAPIs.filter { api in
-         return sources.contains(api.source)
-      }
-      
-      try feedApis.forEach { api in
-         api.delegate = self
-         try api.connect()
-      }
+      return urlString
    }
    
-   func stopTickerUpdates() throws {
-      let sources = self.accountsModel.map { account in
-         return account.source
-      }
-      
-      let feedApis = self.feedAPIs.filter { api in
-         return sources.contains(api.source)
-      }
-      
-      try feedApis.forEach { api in
-         api.delegate = self
-         try api.disconnect()
-      }
-   }
-}
-
-typealias AppManagerWebSocketFeedDelegate = AppManager
-extension AppManagerWebSocketFeedDelegate: AnteWebSocketFeedDelegate {
-   private func generateProductIds(source: AnteDataSource) -> [String] {
-      return self.accountsModel.filter { model in
-            return model.source == source
-         }.filter { model in
-            return model.balance > 0.00
-         }.map { model in
-            return model.currencyPair(self.accountsModel.defaultCurrency)
-         }
-      }
-   
-   func connectionURL(ws: AnteWebSocketFeed) -> URL {
-      switch(ws.source) {
-         case .gdax: return URL(string: gdaxClient.wsURLString)!
-         case .binance:
-            let productIds = generateProductIds(source: ws.source)
-            var params = ""
-            productIds.forEach { productId in
-               params += "\(productId.lowercased())@ticker/"
-            }
-            
-            params.remove(at: params.index(before: params.endIndex))
-            print(params)
-            return URL(string: "\(self.binanceClient.wsURLString)/stream?streams=\(params)")!
-         case .unknown: return URL(string: "")!
-      }
-   }
-   
-   func onConnect(ws: AnteWebSocketFeed) {
-      print("Connected")
-      do {
-         let productIds = generateProductIds(source: ws.source)
-         try ws.subscribeTo(productIds: productIds, channels: ["ticker"])
-      } catch (let err) {
-         print("Error: \(err)")
-      }
-   }
-   
-   func onDisconnect(ws: AnteWebSocketFeed, error: Error?) {
-      print("Disconnected")
-   }
-   
-   func onTickerUpdate(_ ws: AnteWebSocketFeed, _ tick: AnteTicker) {
-      self.accountsModel.updateModelWithTickerUpdate(tick)
+   func feedAPIs() -> [AnteWebSocketFeed] {
+      return [self.gdaxClient.ws!, self.binanceClient.ws!]
    }
 }

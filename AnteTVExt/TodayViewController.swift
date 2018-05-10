@@ -30,6 +30,16 @@ class TodayViewController: UIViewController, NCWidgetProviding {
       self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
       self.accountsVM = AccountsViewModel(AppManager.sharedInstance.accountsModel)
       self.accountsVM!.delegate = self
+      AppManager.sharedInstance.refresh { model, err in
+         NSLog("accounts: \(model.count)")
+         if let err = err {
+            //TODO: handle error
+            err.forEach { err in
+               NSLog(err.localizedDescription)
+            }
+         }
+      }
+
    }
     
    override func didReceiveMemoryWarning() {
@@ -43,13 +53,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
       // If an error is encountered, use NCUpdateResult.Failed
       // If there's no update required, use NCUpdateResult.NoData
       // If there's an update, use NCUpdateResult.NewData
-      AppManager.sharedInstance.refresh { accounts, err in
-         completionHandler(NCUpdateResult.newData)
-         if let err = err {
-            //TODO: handle error
-            NSLog(err.localizedDescription)
-         }
-      }
    }
    
    func widgetActiveDisplayModeDidChange(_ activeDisplayMode: NCWidgetDisplayMode, withMaximumSize maxSize: CGSize) {
