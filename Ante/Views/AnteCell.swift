@@ -28,7 +28,7 @@ class AnteCell: UITableViewCell {
    
    override func layoutSubviews() {
       super.layoutSubviews()
-      self.backgroundColor = AppColors.KryptoCellBackgroundColor
+      self.backgroundColor = AppColors.AnteCellBackgroundColor
       if let model = self.model {
          self.currencyLabel.text = model.currency
          self.coinValueLabel.text = model.value

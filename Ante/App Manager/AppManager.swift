@@ -29,23 +29,22 @@ class AppManager {
    }
    
    public func priceConvertor(source: AnteDataSource, fromCurrency: String) -> PriceConversionFunc {
-      var conversion: Double?
-      
-      if (source == .binance) {
+      var toAmt: Double?
+      if ((source == .binance) && (fromCurrency != "BTC")) {
          // all binance prices are in BTC ; convert using BTCUSDT
          let btcustd = self.accountsModel.filter { model in
             return model.currency == "BTC"
          }
          
-         conversion = btcustd[0].lastTick?.price
+         toAmt = btcustd[0].lastTick?.price
       } 
       
-      func convert(_ amt: Double) -> Double {
-         if let conversion = conversion {
-            return amt * conversion
+      func convert(_ fromAmt: Double) -> Double {
+         if let toAmt = toAmt {
+            return fromAmt * toAmt
          }
          
-         return amt
+         return fromAmt
       }
       
       return convert
@@ -69,7 +68,10 @@ extension AppManagerDataAccess {
                }
                
                if let accounts = accounts {
-                  self.accountsModel.append(contentsOf: accounts)
+                  let filteredAccounts = accounts.filter { acount in
+                     return acount.balance > 0.00
+                  }
+                  self.accountsModel.append(contentsOf: filteredAccounts)
                }
             
                if (idx == count) {

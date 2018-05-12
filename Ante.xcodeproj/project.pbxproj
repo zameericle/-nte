@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5AD8A449ADEC9A160B6C6E34 /* Pods_krypta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD56BE6306D82842872BDDC8 /* Pods_krypta.framework */; };
 		D0096182208404FF00E9E5FC /* AccountsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0096181208404FF00E9E5FC /* AccountsModel.swift */; };
+		D01DE8B120A685EE007A4BBB /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DE8B020A685EE007A4BBB /* CryptoSwift.framework */; };
+		D01DE8B320A685EE007A4BBB /* Keys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DE8B220A685EE007A4BBB /* Keys.framework */; };
+		D01DE8B520A685EE007A4BBB /* Pods_krypta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DE8B420A685EE007A4BBB /* Pods_krypta.framework */; };
+		D01DE8B720A685EE007A4BBB /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01DE8B620A685EE007A4BBB /* Starscream.framework */; };
 		D0271C422086B97F000EDECE /* BinanceTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0271C412086B97F000EDECE /* BinanceTicker.swift */; };
 		D041926E2062174D00E827A1 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D041926F2062174D00E827A1 /* CryptoSwift.framework */; };
 		D042B3F520659DFD005CF5B4 /* GDAXRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B3F420659DFD005CF5B4 /* GDAXRepository.swift */; };
@@ -137,6 +141,10 @@
 /* Begin PBXFileReference section */
 		6F4F2F7925D23FE0E6D5830A /* Pods-krypta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-krypta.release.xcconfig"; path = "Pods/Target Support Files/Pods-krypta/Pods-krypta.release.xcconfig"; sourceTree = "<group>"; };
 		D0096181208404FF00E9E5FC /* AccountsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsModel.swift; sourceTree = "<group>"; };
+		D01DE8B020A685EE007A4BBB /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01DE8B220A685EE007A4BBB /* Keys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01DE8B420A685EE007A4BBB /* Pods_krypta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_krypta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D01DE8B620A685EE007A4BBB /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0271C412086B97F000EDECE /* BinanceTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceTicker.swift; sourceTree = "<group>"; };
 		D041926F2062174D00E827A1 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D042B3F420659DFD005CF5B4 /* GDAXRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXRepository.swift; sourceTree = "<group>"; };
@@ -214,6 +222,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D01DE8B120A685EE007A4BBB /* CryptoSwift.framework in Frameworks */,
+				D01DE8B320A685EE007A4BBB /* Keys.framework in Frameworks */,
+				D01DE8B520A685EE007A4BBB /* Pods_krypta.framework in Frameworks */,
+				D01DE8B720A685EE007A4BBB /* Starscream.framework in Frameworks */,
 				D0E973F82094D86200270DD7 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +236,10 @@
 		40708F4CE49F122D55FED88E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D01DE8B020A685EE007A4BBB /* CryptoSwift.framework */,
+				D01DE8B220A685EE007A4BBB /* Keys.framework */,
+				D01DE8B420A685EE007A4BBB /* Pods_krypta.framework */,
+				D01DE8B620A685EE007A4BBB /* Starscream.framework */,
 				D05E9BCC206B41F1009BE5AC /* Starscream.framework */,
 				D041926F2062174D00E827A1 /* CryptoSwift.framework */,
 				D070AF5B205F5AF5001E47FD /* Keys.framework */,

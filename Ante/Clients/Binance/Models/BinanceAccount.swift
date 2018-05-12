@@ -39,7 +39,7 @@ struct BinanceAccount: AnteAccount {
       
       self.id = UUID().uuidString
       self.currency = try container.decode(String.self, forKey: .currency)
-      
+
       let places = self.currency == "USD" ? 2 : 8
       
       self.available = try Double(container.decode(String.self, forKey: .available))!.roundTo(places: places)
