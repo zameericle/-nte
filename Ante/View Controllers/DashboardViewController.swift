@@ -38,7 +38,7 @@ class DashboardViewController: UIViewController {
       self.tableView.dataSource = self
       self.accountsVM?.delegate = self
       
-      self.hideUI()
+//      self.hideUI()
    }
 
    private func hideUI() {

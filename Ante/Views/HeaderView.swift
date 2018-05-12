@@ -10,10 +10,12 @@ import Foundation
 import UIKit
 
 class PortfolioView: UIView {
-   @IBOutlet weak var portfolioValueLabel: UILabel!
+   @IBOutlet weak var balanceTitleLabel: UILabel!
+   @IBOutlet weak var balanceAmtLabel: UILabel!
 }
 
 class GainLossView: UIView {
+   @IBOutlet weak var gainLossTitleLabel: UILabel!
    @IBOutlet weak var gainLossValueLabel: UILabel!
    @IBOutlet weak var gainLossPctLabel: UILabel!
 }
@@ -22,7 +24,7 @@ class HeaderView: UIView {
 
    var accountSummary: AccountsSummaryVM? {
       didSet {
-         self.portfolioView.portfolioValueLabel.text = "\(self.accountSummary!.portfolioTotal)"
+         self.portfolioView.balanceAmtLabel.text = "\(self.accountSummary!.portfolioTotal)"
          self.gainLossView.gainLossValueLabel.text = "\(self.accountSummary!.gainLoss)"
          self.gainLossView.gainLossPctLabel.text = "\(self.accountSummary!.gainLossPct)"
       }
@@ -41,8 +43,14 @@ class HeaderView: UIView {
    override func layoutSubviews() {
       super.layoutSubviews()
       self.backgroundColor = AppColors.HeaderBackgroundColor
-      self.portfolioView.portfolioValueLabel.text = "loading"
-      self.gainLossView.gainLossValueLabel.text = "loading"
+      self.portfolioView.balanceTitleLabel.textColor = AppColors.HeaderTitleTextColor
+      self.gainLossView.gainLossTitleLabel.textColor = AppColors.HeaderTitleTextColor
+      self.portfolioView.balanceAmtLabel.textColor = AppColors.HeaderTextColor
+      self.gainLossView.gainLossValueLabel.textColor = AppColors.HeaderTextColor
+      self.gainLossView.gainLossPctLabel.textColor = AppColors.HeaderTextColor
+      
+      self.portfolioView.balanceAmtLabel.text = "$--.--"
+      self.gainLossView.gainLossValueLabel.text = "--.--"
    }
 }
 

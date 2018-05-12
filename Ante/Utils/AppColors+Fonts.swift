@@ -21,7 +21,11 @@ class AppColors {
 
    // Actual Elements
    static let AppBackgroundColor = primaryColor
+   
    static let HeaderBackgroundColor = primaryColor
+   static let HeaderTitleTextColor = primaryDarkColor
+   static let HeaderTextColor = primaryTextColor
+   
    static let TableViewBackgroundColor = primaryLightColor
    static let AnteCellBackgroundColor = primaryLightColor
 }
