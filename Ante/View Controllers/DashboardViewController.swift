@@ -9,11 +9,10 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
-   
    @IBOutlet weak var headerView: HeaderView!
    @IBOutlet weak var tableView: UITableView!
-   
    var accountsVM: AccountsViewModel?
+   let loadingView = LoadingView()
    
    internal var tableData: [AccountViewModel] {
       get {
@@ -38,16 +37,24 @@ class DashboardViewController: UIViewController {
       self.tableView.dataSource = self
       self.accountsVM?.delegate = self
       
-//      self.hideUI()
+      self.view.addSubview(loadingView)
+      self.hideUI()
    }
 
    private func hideUI() {
+      self.headerView.alpha = 0
       self.tableView.alpha = 0
+      self.loadingView.beginRefreshing()
    }
    
    private func showUI() {
-      UIView.animate(withDuration: 1) {
-         self.tableView.alpha = 1
+      if (self.headerView.alpha == 0) {
+         self.loadingView.endRefreshing()
+         self.loadingView.removeFromSuperview()
+         UIView.animate(withDuration: 0.5) {
+            self.headerView.alpha = 1
+            self.tableView.alpha = 1
+         }
       }
    }
    
@@ -79,7 +86,6 @@ extension DashboardViewControllerAccountsViewModelDelegate: AccountsViewModelDel
    func onInsert(models: [AccountViewModel]) {
       self.updateUI {
          self.tableView.reloadSections([0], with: .fade)
-         self.showUI()
       }
    }
    
@@ -97,6 +103,7 @@ extension DashboardViewControllerAccountsViewModelDelegate: AccountsViewModelDel
          }
          
          self.updateHeader()
+         self.showUI()
       }
    }
 }

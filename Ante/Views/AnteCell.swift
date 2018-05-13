@@ -35,6 +35,13 @@ class AnteCell: UITableViewCell {
          self.accountBalanceLabel.text = model.balance
          self.priceLabel.text = model.price
          self.gainLossLabel.text = model.gainLoss
+         
+         if (self.gainLossLabel.text?.contains("▼"))! {
+            self.gainLossLabel.textColor = AppColors.NegativeTextColor
+         } else {
+            self.gainLossLabel.textColor = AppColors.PositiveTextColor
+         }
+
          self.sourceLabel.text = "\(model.source)".uppercased()
       }
    }
