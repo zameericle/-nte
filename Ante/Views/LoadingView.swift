@@ -17,7 +17,7 @@ class LoadingView: UIView {
    var rotateAnimation: CABasicAnimation? = nil
    
    convenience init() {
-      self.init(frame: CGRect(x: 0, y: 0, width: 64, height: 64))
+      self.init(frame: CGRect(x: 0, y: 0, width: 32, height: 32))
    }
    
    override init(frame: CGRect) {
@@ -39,6 +39,7 @@ class LoadingView: UIView {
    
    override func layoutSubviews() {
       super.layoutSubviews()
+      self.alpha = 1.0
       self.center = self.superview!.center
    }
    
@@ -52,28 +53,24 @@ class LoadingView: UIView {
    
    func endRefreshing() {
       UIView.animate(withDuration: 0.5) {
-         self.loadingImage.alpha = 0.0
+         self.alpha = 0.0
       }
       
       UIView.animate(withDuration: 0.5, animations: {
-         self.loadingImage.alpha = 0
+         self.alpha = 0
       }) { (result) in
          self.isRotating = false
          self.rotateAnimation?.speed = 0.00
       }
    }
    
-   private func rotate360Degrees(duration: CFTimeInterval = 1.0, completionDelegate: CAAnimationDelegate? = nil) {
+   private func rotate360Degrees(duration: CFTimeInterval = 1.0) {
       rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
       rotateAnimation!.fromValue = 0.0
       rotateAnimation!.toValue = CGFloat(.pi * 2.0)
       rotateAnimation!.duration = duration
       rotateAnimation!.repeatCount = .infinity
       
-      if let delegate = completionDelegate {
-         rotateAnimation!.delegate = delegate
-      }
-      
-      self.layer.add(rotateAnimation!, forKey: nil)
+      self.layer.add(rotateAnimation!, forKey: nil)      
    }
 }
