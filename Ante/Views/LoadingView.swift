@@ -17,7 +17,7 @@ class LoadingView: UIView {
    var rotateAnimation: CABasicAnimation? = nil
    
    convenience init() {
-      self.init(frame: CGRect(x: 0, y: 0, width: 32, height: 32))
+      self.init(frame: CGRect(x: 0, y: 0, width: 48, height: 48))
    }
    
    override init(frame: CGRect) {
