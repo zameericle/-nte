@@ -181,6 +181,7 @@ extension AccountsModelWebSocketFeedDelegate: AnteWebSocketFeedDelegate {
    }
    
    func onDisconnect(ws: AnteWebSocketFeed, error: Error?) {
+      print(error?.localizedDescription ?? "")
       print("Disconnected")
    }
    

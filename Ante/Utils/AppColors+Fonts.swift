@@ -30,6 +30,6 @@ class AppColors {
    static let AnteCellBackgroundColor = primaryLightColor
    
    // Text 
-   static let PositiveTextColor = UIColor(red: 0, green: 0.560, blue: 0, alpha: 0.8)
-   static let NegativeTextColor = UIColor(red: 1.00, green: 0.149, blue: 0, alpha: 0.8)
+   static let PositiveTextColor = secondaryLightColor
+   static let NegativeTextColor = secondaryLightColor
 }

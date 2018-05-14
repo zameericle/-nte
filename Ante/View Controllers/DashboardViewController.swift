@@ -12,7 +12,7 @@ class DashboardViewController: UIViewController {
    @IBOutlet weak var headerView: HeaderView!
    @IBOutlet weak var tableView: UITableView!
    var accountsVM: AccountsViewModel?
-   let loadingView = LoadingView()
+   var loadingView: LoadingView?
    
    internal var tableData: [AccountViewModel] {
       get {
@@ -36,21 +36,20 @@ class DashboardViewController: UIViewController {
       self.tableView.delegate = self
       self.tableView.dataSource = self
       self.accountsVM?.delegate = self
-      
-      self.view.addSubview(loadingView)
+      self.loadingView = LoadingView(view: self.view)
       self.hideUI()
    }
 
    private func hideUI() {
       self.headerView.alpha = 0
       self.tableView.alpha = 0
-      self.loadingView.beginRefreshing()
+      self.loadingView!.beginRefreshing()
    }
    
    private func showUI() {
       if (self.headerView.alpha == 0) {
-         self.loadingView.endRefreshing()
-         self.loadingView.removeFromSuperview()
+         self.loadingView!.endRefreshing()
+      
          UIView.animate(withDuration: 0.5) {
             self.headerView.alpha = 1
             self.tableView.alpha = 1

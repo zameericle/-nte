@@ -16,8 +16,10 @@ class LoadingView: UIView {
    var isRotating = false
    var rotateAnimation: CABasicAnimation? = nil
    
-   convenience init() {
+   convenience init(view: UIView) {
       self.init(frame: CGRect(x: 0, y: 0, width: 48, height: 48))
+      view.addSubview(self)
+      self.loadingImage.alpha = 0.7
    }
    
    override init(frame: CGRect) {
@@ -52,15 +54,13 @@ class LoadingView: UIView {
    }
    
    func endRefreshing() {
-      UIView.animate(withDuration: 0.5) {
-         self.alpha = 0.0
-      }
-      
-      UIView.animate(withDuration: 0.5, animations: {
+      UIView.animate(withDuration: 0.3, animations: {
+         self.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
          self.alpha = 0
       }) { (result) in
          self.isRotating = false
          self.rotateAnimation?.speed = 0.00
+         self.removeFromSuperview()
       }
    }
    
