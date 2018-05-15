@@ -11,8 +11,12 @@ import UIKit
 class DashboardViewController: UIViewController {
    @IBOutlet weak var headerView: HeaderView!
    @IBOutlet weak var tableView: UITableView!
+   
    var accountsVM: AccountsViewModel?
    var loadingView: LoadingView?
+   override var preferredStatusBarStyle: UIStatusBarStyle {
+      return UIStatusBarStyle.lightContent
+   }
    
    internal var tableData: [AccountViewModel] {
       get {
@@ -128,6 +132,10 @@ extension DashboardViewControllerUITableViewDataSource: UITableViewDataSource {
       
       let account = self.tableData[indexPath.row]
       cell.model = account
+      
+      cell.layer.borderColor = AppColors.AnteCellBorderColor.cgColor
+      cell.layer.borderWidth = 3
+      cell.clipsToBounds = true
       
       return cell
    }

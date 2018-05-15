@@ -22,12 +22,19 @@ class AppColors {
    // Actual Elements
    static let AppBackgroundColor = primaryColor
    
-   static let HeaderBackgroundColor = primaryColor
+   static let HeaderBackgroundColor = secondaryDarkColor //primaryColor
    static let HeaderTitleTextColor = secondaryLightColor
-   static let HeaderTextColor = secondaryLightColor
+   static let HeaderTextColor = secondaryTextColor
    
    static let TableViewBackgroundColor = primaryLightColor
-   static let AnteCellBackgroundColor = primaryLightColor
+   static let AnteCellBackgroundColor = primaryDarkColor //primaryLightColor
+   static let AnteCellBorderColor = primaryLightColor
+   static let AnteCellCurrencyLabelTextColor = secondaryTextColor
+   static let AnteCellCoinValueTextColor = secondaryLightColor
+   static let AnteCellAccountBalanceTextColor = secondaryLightColor
+   static let AnteCellPriceLabelTextColor = secondaryTextColor
+   static let AnteCellGainLossTextColor = secondaryLightColor
+   static let AnteCellSourceTextColor = secondaryLightColor
    
    // Text 
    static let PositiveTextColor = secondaryLightColor

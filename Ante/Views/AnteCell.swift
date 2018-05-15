@@ -29,6 +29,13 @@ class AnteCell: UITableViewCell {
    override func layoutSubviews() {
       super.layoutSubviews()
       self.backgroundColor = AppColors.AnteCellBackgroundColor
+      self.currencyLabel.textColor = AppColors.AnteCellCurrencyLabelTextColor
+      self.coinValueLabel.textColor = AppColors.AnteCellCoinValueTextColor
+      self.accountBalanceLabel.textColor = AppColors.AnteCellAccountBalanceTextColor
+      self.priceLabel.textColor = AppColors.AnteCellPriceLabelTextColor
+      self.gainLossLabel.textColor = AppColors.AnteCellGainLossTextColor
+      self.sourceLabel.textColor = AppColors.AnteCellSourceTextColor
+      
       if let model = self.model {
          self.currencyLabel.text = model.currency
          self.coinValueLabel.text = model.value

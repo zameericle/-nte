@@ -26,18 +26,19 @@ class HeaderView: UIView {
       didSet {
          self.portfolioView.balanceAmtLabel.text = "\(self.accountSummary!.portfolioTotal)"
          self.gainLossView.gainLossValueLabel.text = "\(self.accountSummary!.gainLoss)"
-         if (self.gainLossView.gainLossValueLabel.text?.contains("-"))! {
-            self.gainLossView.gainLossValueLabel.textColor = AppColors.NegativeTextColor
-         } else {
-            self.gainLossView.gainLossValueLabel.textColor = AppColors.PositiveTextColor
-         }
-
          self.gainLossView.gainLossPctLabel.text = "\(self.accountSummary!.gainLossPct)"
-         if (self.gainLossView.gainLossPctLabel.text?.contains("▼"))! {
-            self.gainLossView.gainLossPctLabel.textColor = AppColors.NegativeTextColor
-         } else {
-            self.gainLossView.gainLossPctLabel.textColor = AppColors.PositiveTextColor
-         }
+         
+////         if (self.gainLossView.gainLossValueLabel.text?.contains("-"))! {
+////            self.gainLossView.gainLossValueLabel.textColor = AppColors.NegativeTextColor
+////         } else {
+////            self.gainLossView.gainLossValueLabel.textColor = AppColors.PositiveTextColor
+////         }
+////
+////         if (self.gainLossView.gainLossPctLabel.text?.contains("▼"))! {
+////            self.gainLossView.gainLossPctLabel.textColor = AppColors.NegativeTextColor
+////         } else {
+////            self.gainLossView.gainLossPctLabel.textColor = AppColors.PositiveTextColor
+////         }
       }
    }
    @IBOutlet weak var portfolioView: PortfolioView!
