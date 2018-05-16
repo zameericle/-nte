@@ -15,7 +15,7 @@ class DashboardViewController: UIViewController {
    var accountsVM: AccountsViewModel?
    var loadingView: LoadingView?
    override var preferredStatusBarStyle: UIStatusBarStyle {
-      return UIStatusBarStyle.lightContent
+      return UIStatusBarStyle.default
    }
    
    internal var tableData: [AccountViewModel] {
@@ -134,7 +134,7 @@ extension DashboardViewControllerUITableViewDataSource: UITableViewDataSource {
       cell.model = account
       
       cell.layer.borderColor = AppColors.AnteCellBorderColor.cgColor
-      cell.layer.borderWidth = 3
+      cell.layer.borderWidth = 1
       cell.clipsToBounds = true
       
       return cell

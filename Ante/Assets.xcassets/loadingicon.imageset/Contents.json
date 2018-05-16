@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "loadingicon@1x.png",
+      "filename" : "loadingicon.png",
       "scale" : "1x"
     },
     {

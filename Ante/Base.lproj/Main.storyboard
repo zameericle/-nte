@@ -129,7 +129,7 @@
                                 </connections>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D9G-9O-QmH" userLabel="TableView">
-                                <rect key="frame" x="0.0" y="154.5" width="375" height="463.5"/>
+                                <rect key="frame" x="0.0" y="150.5" width="375" height="467.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
@@ -218,11 +218,12 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="D9G-9O-QmH" firstAttribute="height" secondItem="g6E-f6-a4p" secondAttribute="height" multiplier="0.775" id="4gc-tt-RiZ"/>
                             <constraint firstItem="D9G-9O-QmH" firstAttribute="width" secondItem="X1f-EA-ANx" secondAttribute="width" id="75T-Tf-aYM"/>
                             <constraint firstItem="X1f-EA-ANx" firstAttribute="height" secondItem="g6E-f6-a4p" secondAttribute="height" multiplier="0.3" id="7Ku-fb-kZJ"/>
                             <constraint firstItem="D9G-9O-QmH" firstAttribute="leading" secondItem="X1f-EA-ANx" secondAttribute="leading" id="E7H-Qh-Uvu"/>
                             <constraint firstItem="g6E-f6-a4p" firstAttribute="bottom" secondItem="D9G-9O-QmH" secondAttribute="bottom" id="R6Y-OZ-9mb"/>
+                            <constraint firstItem="D9G-9O-QmH" firstAttribute="top" secondItem="X1f-EA-ANx" secondAttribute="bottom" constant="1" id="Zeo-3I-2OZ"/>
+                            <constraint firstItem="g6E-f6-a4p" firstAttribute="bottom" secondItem="D9G-9O-QmH" secondAttribute="bottom" id="e70-Ij-cuR"/>
                             <constraint firstItem="X1f-EA-ANx" firstAttribute="width" secondItem="g6E-f6-a4p" secondAttribute="width" id="hw7-hG-qCL"/>
                             <constraint firstItem="X1f-EA-ANx" firstAttribute="centerX" secondItem="g6E-f6-a4p" secondAttribute="centerX" id="iXi-Oy-p2V"/>
                             <constraint firstItem="g6E-f6-a4p" firstAttribute="top" secondItem="X1f-EA-ANx" secondAttribute="top" constant="50" id="zLs-gW-yfM"/>

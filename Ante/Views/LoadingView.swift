@@ -11,7 +11,6 @@ import UIKit
 
 class LoadingView: UIView {
    @IBOutlet var contentView: UIView!
-   @IBOutlet weak var loadingImage: UIImageView!
    
    var isRotating = false
    var rotateAnimation: CABasicAnimation? = nil
@@ -19,7 +18,7 @@ class LoadingView: UIView {
    convenience init(view: UIView) {
       self.init(frame: CGRect(x: 0, y: 0, width: 48, height: 48))
       view.addSubview(self)
-      self.loadingImage.alpha = 0.7
+      self.contentView.alpha = 0.7
    }
    
    override init(frame: CGRect) {
