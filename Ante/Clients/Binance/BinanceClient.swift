@@ -27,7 +27,7 @@ struct BinanceClientBuilder {
    }
 }
 
-// contains all the config related to connecting to GDAX
+// contains all the config related to connecting to Binance
 struct BinanceClient {
    
    public var config: BinanceConfig

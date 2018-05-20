@@ -69,7 +69,13 @@ class LoadingView: UIView {
       rotateAnimation!.toValue = CGFloat(.pi * 2.0)
       rotateAnimation!.duration = duration
       rotateAnimation!.repeatCount = .infinity
-      
-      self.layer.add(rotateAnimation!, forKey: nil)      
+
+      let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+      scaleAnimation.fromValue = 0.0
+      scaleAnimation.toValue = 1.0
+      scaleAnimation.duration = duration
+
+      self.layer.add(rotateAnimation!, forKey: nil)
+      self.layer.add(scaleAnimation, forKey: nil)
    }
 }

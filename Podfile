@@ -8,7 +8,6 @@ target 'Ante' do
   # Pods for Ante
   pod 'CryptoSwift'
   pod 'Starscream', '~> 3.0.2'
- 
 end
 
 plugin 'cocoapods-keys', {
@@ -18,5 +17,6 @@ plugin 'cocoapods-keys', {
     "GDAXSecretKey",
     "GDAXPassphrase",
     "BinanceAPIKey",
-    "BinanceSecretKey"
+    "BinanceSecretKey",
+    "CryptoPanicAuthToken"
   ]}

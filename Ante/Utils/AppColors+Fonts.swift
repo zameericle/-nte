@@ -19,18 +19,18 @@ class AppColors {
    static let AppBackgroundColor = primaryDarkColor
    
    static let HeaderBackgroundColor = primaryColor
-   static let HeaderTitleTextColor = primaryTextColor
+   static let HeaderTitleTextColor = primaryDarkColor
    static let HeaderTextColor = primaryTextColor
    
    static let TableViewBackgroundColor = primaryDarkColor
    static let AnteCellBackgroundColor = primaryLightColor
    static let AnteCellBorderColor = primaryDarkColor
-   static let AnteCellCurrencyLabelTextColor = primaryTextColor
-   static let AnteCellCoinValueTextColor = primaryDarkColor
+   static let AnteCellCurrencyLabelTextColor = primaryDarkColor
+   static let AnteCellCoinValueTextColor = primaryTextColor
    static let AnteCellAccountBalanceTextColor = primaryTextColor
    static let AnteCellPriceLabelTextColor = primaryTextColor
    static let AnteCellGainLossTextColor = primaryTextColor
-   static let AnteCellSourceTextColor = primaryTextColor
+   static let AnteCellSourceTextColor = primaryDarkColor
    
    // Text 
    static let PositiveTextColor = primaryTextColor

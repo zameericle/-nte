@@ -9,6 +9,10 @@
 import Foundation
 import Keys
 
+struct CPConfig {
+   let authToken: String
+}
+
 struct BinanceConfig {
    let key: String
    let secret: String
@@ -28,5 +32,9 @@ struct KeyManager {
    
    static func gdaxInfo() -> GDAXConfig {
       return GDAXConfig(key: AnteKeys().gDAXAPIKey, secret: AnteKeys().gDAXSecretKey, passphrase: AnteKeys().gDAXPassphrase)
+   }
+   
+   static func CPInfo() -> CPConfig {
+      return CPConfig(authToken: AnteKeys().cryptoPanicAuthToken)
    }
 }

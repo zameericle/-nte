@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5AD8A449ADEC9A160B6C6E34 /* Pods_krypta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD56BE6306D82842872BDDC8 /* Pods_krypta.framework */; };
+		7D8AEB8DED6537C12E0C9DD8 /* Pods_Ante.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869EA3E908233A30CD9B42FA /* Pods_Ante.framework */; };
 		D0096182208404FF00E9E5FC /* AccountsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0096181208404FF00E9E5FC /* AccountsModel.swift */; };
+		D015039420B2161300F16B42 /* CPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015039320B2161300F16B42 /* CPClient.swift */; };
+		D015039820B217D500F16B42 /* CPPublicAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015039720B217D500F16B42 /* CPPublicAPI.swift */; };
+		D015039A20B2180200F16B42 /* CPAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D015039920B2180200F16B42 /* CPAPI.swift */; };
 		D0271C422086B97F000EDECE /* BinanceTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0271C412086B97F000EDECE /* BinanceTicker.swift */; };
 		D02DFE0B20A8F8280017E797 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02DFE0A20A8F8280017E797 /* LoadingView.swift */; };
 		D02DFE0D20A8F9210017E797 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D02DFE0C20A8F9210017E797 /* LoadingView.xib */; };
-		D041926E2062174D00E827A1 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D041926F2062174D00E827A1 /* CryptoSwift.framework */; };
 		D042B3F520659DFD005CF5B4 /* GDAXRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B3F420659DFD005CF5B4 /* GDAXRepository.swift */; };
 		D042B3F720659F9A005CF5B4 /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B3F620659F9A005CF5B4 /* KeyManager.swift */; };
 		D042B3FF2065B5B3005CF5B4 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = D042B3FE2065B5B3005CF5B4 /* Double.swift */; };
@@ -32,11 +34,9 @@
 		D0587D11205645640040CE16 /* GDAXHistoricRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587D10205645640040CE16 /* GDAXHistoricRate.swift */; };
 		D0587D132056542E0040CE16 /* GDAXProductDailyStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0587D122056542E0040CE16 /* GDAXProductDailyStat.swift */; };
 		D05E9BCA206B41D0009BE5AC /* GDAXWebSocketFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E9BC9206B41D0009BE5AC /* GDAXWebSocketFeed.swift */; };
-		D05E9BCB206B41F1009BE5AC /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D05E9BCC206B41F1009BE5AC /* Starscream.framework */; };
 		D05E9BD4206B621F009BE5AC /* AnteWebSocketFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E9BD3206B621F009BE5AC /* AnteWebSocketFeed.swift */; };
 		D05E9BD6206B62DE009BE5AC /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E9BD5206B62DE009BE5AC /* AppManager.swift */; };
 		D05E9BD9206B6EC6009BE5AC /* GDAXTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E9BD8206B6EC6009BE5AC /* GDAXTicker.swift */; };
-		D070AF5A205F5AF5001E47FD /* Keys.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D070AF5B205F5AF5001E47FD /* Keys.framework */; };
 		D070AF5D205F5E30001E47FD /* GDAXAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070AF5C205F5E30001E47FD /* GDAXAccount.swift */; };
 		D070AF5F205F63D9001E47FD /* GDAXAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070AF5E205F63D9001E47FD /* GDAXAPIError.swift */; };
 		D070AF63205F730A001E47FD /* GDAXAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D070AF62205F730A001E47FD /* GDAXAPI.swift */; };
@@ -77,16 +77,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6F4F2F7925D23FE0E6D5830A /* Pods-krypta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-krypta.release.xcconfig"; path = "Pods/Target Support Files/Pods-krypta/Pods-krypta.release.xcconfig"; sourceTree = "<group>"; };
+		4C5BDEA613C51A3D095A47E8 /* Pods-Ante.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ante.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Ante/Pods-Ante.debug.xcconfig"; sourceTree = "<group>"; };
+		869EA3E908233A30CD9B42FA /* Pods_Ante.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ante.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0096181208404FF00E9E5FC /* AccountsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsModel.swift; sourceTree = "<group>"; };
-		D01DE8B020A685EE007A4BBB /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D01DE8B220A685EE007A4BBB /* Keys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D01DE8B420A685EE007A4BBB /* Pods_krypta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_krypta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D01DE8B620A685EE007A4BBB /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D015039320B2161300F16B42 /* CPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPClient.swift; sourceTree = "<group>"; };
+		D015039720B217D500F16B42 /* CPPublicAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPublicAPI.swift; sourceTree = "<group>"; };
+		D015039920B2180200F16B42 /* CPAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPAPI.swift; sourceTree = "<group>"; };
 		D0271C412086B97F000EDECE /* BinanceTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceTicker.swift; sourceTree = "<group>"; };
 		D02DFE0A20A8F8280017E797 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		D02DFE0C20A8F9210017E797 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		D041926F2062174D00E827A1 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D042B3F420659DFD005CF5B4 /* GDAXRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXRepository.swift; sourceTree = "<group>"; };
 		D042B3F620659F9A005CF5B4 /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 		D042B3FE2065B5B3005CF5B4 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
@@ -106,11 +105,9 @@
 		D0587D10205645640040CE16 /* GDAXHistoricRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXHistoricRate.swift; sourceTree = "<group>"; };
 		D0587D122056542E0040CE16 /* GDAXProductDailyStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXProductDailyStat.swift; sourceTree = "<group>"; };
 		D05E9BC9206B41D0009BE5AC /* GDAXWebSocketFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXWebSocketFeed.swift; sourceTree = "<group>"; };
-		D05E9BCC206B41F1009BE5AC /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05E9BD3206B621F009BE5AC /* AnteWebSocketFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnteWebSocketFeed.swift; sourceTree = "<group>"; };
 		D05E9BD5206B62DE009BE5AC /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		D05E9BD8206B6EC6009BE5AC /* GDAXTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXTicker.swift; sourceTree = "<group>"; };
-		D070AF5B205F5AF5001E47FD /* Keys.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Keys.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D070AF5C205F5E30001E47FD /* GDAXAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXAccount.swift; sourceTree = "<group>"; };
 		D070AF5E205F63D9001E47FD /* GDAXAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXAPIError.swift; sourceTree = "<group>"; };
 		D070AF62205F730A001E47FD /* GDAXAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDAXAPI.swift; sourceTree = "<group>"; };
@@ -136,10 +133,9 @@
 		D0D3CE46207066F90082C722 /* AnteAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnteAPIError.swift; sourceTree = "<group>"; };
 		D0D3CE48207071C60082C722 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		D0D3CE4A207075C50082C722 /* BinanceAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceAccount.swift; sourceTree = "<group>"; };
-		D0D7653BC87FF6B1646B0E00 /* Pods-krypta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-krypta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-krypta/Pods-krypta.debug.xcconfig"; sourceTree = "<group>"; };
 		D0E973F72094D86200270DD7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		D0ED2E46204B901D00D5EF40 /* AnteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnteCell.swift; sourceTree = "<group>"; };
-		DD56BE6306D82842872BDDC8 /* Pods_krypta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_krypta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8C8CBFFDB9B0A5A8C330128 /* Pods-Ante.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ante.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ante/Pods-Ante.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,10 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D05E9BCB206B41F1009BE5AC /* Starscream.framework in Frameworks */,
-				D041926E2062174D00E827A1 /* CryptoSwift.framework in Frameworks */,
-				D070AF5A205F5AF5001E47FD /* Keys.framework in Frameworks */,
-				5AD8A449ADEC9A160B6C6E34 /* Pods_krypta.framework in Frameworks */,
+				7D8AEB8DED6537C12E0C9DD8 /* Pods_Ante.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,15 +153,8 @@
 		40708F4CE49F122D55FED88E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D01DE8B020A685EE007A4BBB /* CryptoSwift.framework */,
-				D01DE8B220A685EE007A4BBB /* Keys.framework */,
-				D01DE8B420A685EE007A4BBB /* Pods_krypta.framework */,
-				D01DE8B620A685EE007A4BBB /* Starscream.framework */,
-				D05E9BCC206B41F1009BE5AC /* Starscream.framework */,
-				D041926F2062174D00E827A1 /* CryptoSwift.framework */,
-				D070AF5B205F5AF5001E47FD /* Keys.framework */,
-				DD56BE6306D82842872BDDC8 /* Pods_krypta.framework */,
 				D0E973F72094D86200270DD7 /* NotificationCenter.framework */,
+				869EA3E908233A30CD9B42FA /* Pods_Ante.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,8 +162,8 @@
 		7677509AF462E2E25047344F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D0D7653BC87FF6B1646B0E00 /* Pods-krypta.debug.xcconfig */,
-				6F4F2F7925D23FE0E6D5830A /* Pods-krypta.release.xcconfig */,
+				4C5BDEA613C51A3D095A47E8 /* Pods-Ante.debug.xcconfig */,
+				E8C8CBFFDB9B0A5A8C330128 /* Pods-Ante.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -198,6 +184,24 @@
 				D0096181208404FF00E9E5FC /* AccountsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D015039220B215F900F16B42 /* CryptoPanic */ = {
+			isa = PBXGroup;
+			children = (
+				D015039520B217BA00F16B42 /* API */,
+				D015039320B2161300F16B42 /* CPClient.swift */,
+			);
+			path = CryptoPanic;
+			sourceTree = "<group>";
+		};
+		D015039520B217BA00F16B42 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D015039920B2180200F16B42 /* CPAPI.swift */,
+				D015039720B217D500F16B42 /* CPPublicAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		D042B3F320659D10005CF5B4 /* Repositories */ = {
@@ -224,6 +228,7 @@
 				D0587D0B205642CD0040CE16 /* AnteHTTPClient.swift */,
 				D05E9BD3206B621F009BE5AC /* AnteWebSocketFeed.swift */,
 				D0D3CE1B2070509D0082C722 /* Binance */,
+				D015039220B215F900F16B42 /* CryptoPanic */,
 				D0587CF32055CE6E0040CE16 /* GDAX */,
 			);
 			path = Clients;
@@ -479,7 +484,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-krypta/Pods-krypta-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ante/Pods-Ante-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		98F435A585E30F3D7BA81085 /* [CP] Embed Pods Frameworks */ = {
@@ -488,7 +493,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-krypta/Pods-krypta-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Ante/Pods-Ante-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
@@ -501,7 +506,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-krypta/Pods-krypta-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ante/Pods-Ante-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C8FBD35B22E42AD1182DFA0F /* [CP] Check Pods Manifest.lock */ = {
@@ -515,7 +520,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-krypta-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Ante-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -537,11 +542,13 @@
 				D0D3CE43207057DC0082C722 /* AnteAccount.swift in Sources */,
 				D0D3CE26207052C80082C722 /* BinanceWebSocketFeed.swift in Sources */,
 				D0D3CE42207057DC0082C722 /* AnteTicker.swift in Sources */,
+				D015039820B217D500F16B42 /* CPPublicAPI.swift in Sources */,
 				D0CCF673204B160B00085AD3 /* DashboardViewController.swift in Sources */,
 				D0CCF671204B160B00085AD3 /* AppDelegate.swift in Sources */,
 				D0D3CE202070529F0082C722 /* BinanceAPI.swift in Sources */,
 				D0D3CE49207071C60082C722 /* Date.swift in Sources */,
 				D0587D0020562AC50040CE16 /* GDAXProduct.swift in Sources */,
+				D015039A20B2180200F16B42 /* CPAPI.swift in Sources */,
 				D042B3F720659F9A005CF5B4 /* KeyManager.swift in Sources */,
 				D0587CFE205629320040CE16 /* GDAXCurrency.swift in Sources */,
 				D070AF5D205F5E30001E47FD /* GDAXAccount.swift in Sources */,
@@ -561,6 +568,7 @@
 				D0D3CE41207057DC0082C722 /* AnteModel.swift in Sources */,
 				D042B3F520659DFD005CF5B4 /* GDAXRepository.swift in Sources */,
 				D0271C422086B97F000EDECE /* BinanceTicker.swift in Sources */,
+				D015039420B2161300F16B42 /* CPClient.swift in Sources */,
 				D0096182208404FF00E9E5FC /* AccountsModel.swift in Sources */,
 				D042B4022065B8BE005CF5B4 /* AccountsViewModel.swift in Sources */,
 				D0587D0C205642CD0040CE16 /* AnteHTTPClient.swift in Sources */,
@@ -602,7 +610,6 @@
 /* Begin XCBuildConfiguration section */
 		D0CCF67D204B160B00085AD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0D7653BC87FF6B1646B0E00 /* Pods-krypta.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -662,7 +669,6 @@
 		};
 		D0CCF67E204B160B00085AD3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F4F2F7925D23FE0E6D5830A /* Pods-krypta.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -715,6 +721,7 @@
 		};
 		D0CCF680204B160B00085AD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5BDEA613C51A3D095A47E8 /* Pods-Ante.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -732,6 +739,7 @@
 		};
 		D0CCF681204B160B00085AD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8C8CBFFDB9B0A5A8C330128 /* Pods-Ante.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

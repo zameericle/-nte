@@ -14,24 +14,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Settings-->
-        <scene sceneID="E6C-wG-uQH">
-            <objects>
-                <viewController id="6O6-30-ef4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ani-B8-sEd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="sr1-xi-lPD"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="settings" landscapeImage="settings" selectedImage="settings" id="EFf-0k-Lpc">
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ev-31-ulI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1210" y="-75"/>
-        </scene>
         <!--Dashboard-->
         <scene sceneID="3A3-Af-oE3">
             <objects>
@@ -143,7 +125,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw0-W7-7ay" userLabel="currencyLabel">
                                                     <rect key="frame" x="15" y="21" width="131" height="48"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                     <size key="shadowOffset" width="-1" height="-1"/>
                                                 </label>
@@ -255,16 +237,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="hVr-He-3zi" kind="relationship" relationship="viewControllers" id="K55-BW-hMe"/>
-                        <segue destination="6O6-30-ef4" kind="relationship" relationship="viewControllers" id="uwU-nT-09L"/>
+                        <segue destination="jR9-R4-y8M" kind="relationship" relationship="viewControllers" id="3rM-YE-kpG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nU3-Jj-GnE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2161" y="-488"/>
         </scene>
+        <!--RSS-->
+        <scene sceneID="fdl-4c-HNY">
+            <objects>
+                <viewController id="jR9-R4-y8M" userLabel="RSS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OUM-F5-X8z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zOf-HL-z2v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News" image="rss" landscapeImage="rss" selectedImage="rss" id="xGO-k1-ebF" userLabel="News"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JwT-c7-0Dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1263" y="-109"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bar-graph-with-dollar-sign" width="17" height="17"/>
-        <image name="settings" width="17" height="17"/>
+        <image name="rss" width="17" height="17"/>
     </resources>
 </document>
