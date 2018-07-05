@@ -17,7 +17,9 @@ struct GDAXRepository: AnteRepository {
    init(client: GDAXClient) {
       self.gdaxClient = client
    }
-   
+}
+
+extension GDAXRepository: CryptoCurrencyRepository {
    func fetchAllAccounts(completion: @escaping ([AnteAccount]?, Error?) -> Void) {
       self.gdaxClient.private.accounts() {
          result in

@@ -1,25 +1,23 @@
 //
-//  BinanceRepository.swift
+//  CPRepository.swift
 //  Ante
 //
-//  Created by Zameer Andani on 3/31/18.
+//  Created by Zameer Andani on 5/22/18.
 //  Copyright © 2018 shabash. All rights reserved.
 //
 
 import Foundation
 
-struct BinanceRepository: AnteRepository {
+struct CPRepository: AnteRepository {
    
-   var source: AnteDataSource = .binance
+   var source: AnteDataSource = .cryptopanic
    
    private let binanceClient: BinanceClient
    
    init(client: BinanceClient) {
       self.binanceClient = client
    }
-}
-
-extension BinanceRepository: CryptoCurrencyRepository {
+   
    func fetchAllAccounts(completion: @escaping ([AnteAccount]?, Error?) -> Void) {
       self.binanceClient.private.accounts() {
          result in

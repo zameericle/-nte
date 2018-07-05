@@ -11,6 +11,7 @@ import Foundation
 enum AnteDataSource {
    case gdax
    case binance
+   case cryptopanic
    case unknown
 }
 

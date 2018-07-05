@@ -16,7 +16,7 @@ class AppManager {
    
    let accountsModel: AccountsModel = AccountsModel("USD")
    
-   private var repositories: [AnteRepository] = []
+   private var repositories: [CryptoCurrencyRepository] = []
    private let binanceClient: BinanceClient
    private let gdaxClient: GDAXClient
    
@@ -60,7 +60,7 @@ extension AppManagerDataAccess {
       
       repositories.forEach { repository in
          repository.fetchAllAccounts { accounts, err in
-            print("\(repository.source) loading completed")
+            print("\((repository as! AnteRepository).source) loading completed")
             self.queue.sync {
                idx = idx + 1
                if let err = err {

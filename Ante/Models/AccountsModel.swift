@@ -166,7 +166,7 @@ extension AccountsModelWebSocketFeedDelegate: AnteWebSocketFeedDelegate {
          
          params.remove(at: params.index(before: params.endIndex))
          return URL(string: "\(urlString!)/stream?streams=\(params)")!
-      case .unknown: return URL(string: "")!
+      default: return URL(string: "")!
       }
    }
    

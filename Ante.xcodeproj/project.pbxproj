@@ -61,6 +61,8 @@
 		D0D3CE49207071C60082C722 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE48207071C60082C722 /* Date.swift */; };
 		D0D3CE4B207075C50082C722 /* BinanceAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3CE4A207075C50082C722 /* BinanceAccount.swift */; };
 		D0ED2E47204B901D00D5EF40 /* AnteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED2E46204B901D00D5EF40 /* AnteCell.swift */; };
+		D0F9004120B52A860056DCAC /* CPPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9004020B52A860056DCAC /* CPPosts.swift */; };
+		D0F9004320B52E9D0056DCAC /* CPRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F9004220B52E9D0056DCAC /* CPRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -135,6 +137,8 @@
 		D0D3CE4A207075C50082C722 /* BinanceAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceAccount.swift; sourceTree = "<group>"; };
 		D0E973F72094D86200270DD7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		D0ED2E46204B901D00D5EF40 /* AnteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnteCell.swift; sourceTree = "<group>"; };
+		D0F9004020B52A860056DCAC /* CPPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPPosts.swift; sourceTree = "<group>"; };
+		D0F9004220B52E9D0056DCAC /* CPRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPRepository.swift; sourceTree = "<group>"; };
 		E8C8CBFFDB9B0A5A8C330128 /* Pods-Ante.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ante.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ante/Pods-Ante.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +193,7 @@
 		D015039220B215F900F16B42 /* CryptoPanic */ = {
 			isa = PBXGroup;
 			children = (
+				D0F9003F20B52A290056DCAC /* Models */,
 				D015039520B217BA00F16B42 /* API */,
 				D015039320B2161300F16B42 /* CPClient.swift */,
 			);
@@ -208,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				D0D3CE44207058120082C722 /* BinanceRepository.swift */,
+				D0F9004220B52E9D0056DCAC /* CPRepository.swift */,
 				D042B3F420659DFD005CF5B4 /* GDAXRepository.swift */,
 			);
 			path = Repositories;
@@ -399,6 +405,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		D0F9003F20B52A290056DCAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0F9004020B52A860056DCAC /* CPPosts.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -556,6 +570,7 @@
 				D05E9BCA206B41D0009BE5AC /* GDAXWebSocketFeed.swift in Sources */,
 				D070AF5F205F63D9001E47FD /* GDAXAPIError.swift in Sources */,
 				D0D3CE1D207050CF0082C722 /* BinanceClient.swift in Sources */,
+				D0F9004320B52E9D0056DCAC /* CPRepository.swift in Sources */,
 				D0587D0A205642AB0040CE16 /* GDAXPublicAPI.swift in Sources */,
 				D0587CFA2055EEE80040CE16 /* GDAXTime.swift in Sources */,
 				D0549F2B2071CBC500F08ACC /* AccountViewModel.swift in Sources */,
@@ -566,6 +581,7 @@
 				D0CCF684204B16BB00085AD3 /* AppColors+Fonts.swift in Sources */,
 				D05E9BD6206B62DE009BE5AC /* AppManager.swift in Sources */,
 				D0D3CE41207057DC0082C722 /* AnteModel.swift in Sources */,
+				D0F9004120B52A860056DCAC /* CPPosts.swift in Sources */,
 				D042B3F520659DFD005CF5B4 /* GDAXRepository.swift in Sources */,
 				D0271C422086B97F000EDECE /* BinanceTicker.swift in Sources */,
 				D015039420B2161300F16B42 /* CPClient.swift in Sources */,

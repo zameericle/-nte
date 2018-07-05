@@ -12,6 +12,8 @@ protocol AnteRepository {
    var source: AnteDataSource {
       get
    }
-   
+}
+
+protocol CryptoCurrencyRepository {
    func fetchAllAccounts(completion: @escaping ([AnteAccount]?, Error?) -> Void)
 }
